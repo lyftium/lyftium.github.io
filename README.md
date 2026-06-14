@@ -13,6 +13,16 @@ We're AI engineers and automation specialists focused on building practical syst
 
 ## Skills & Expertise
 
+### Machine Learning & Data Engineering
+- **Predictive Analytics** - Building models for churn prediction, demand forecasting, and fraud detection
+- **Natural Language Processing (NLP)** - Text analysis, sentiment analysis, and language models
+- **Computer Vision** - Image processing, object detection, and visual recognition systems
+- **Generative AI** - LLM integration, fine-tuning, and custom AI model development
+- **MLOps & Model Deployment** - TensorFlow, PyTorch, AWS, Azure, GCP deployment pipelines
+- **Data Pipeline Architecture** - ETL/ELT pipelines, real-time data processing, and data warehousing
+- **Feature Engineering** - Data preprocessing, feature selection, and model optimization
+- **Model Monitoring & Observability** - Performance tracking, drift detection, and automated retraining
+
 ### AI & Automation
 - **Custom AI Agents** - Building intelligent agents connected to your existing tools and workflows
 - **Workflow Automation** - Removing manual work through intelligent automation pipelines
@@ -46,17 +56,23 @@ We're AI engineers and automation specialists focused on building practical syst
 
 ## Featured Projects
 
-### [Locally Swift](https://www.optinampout.com)
-Local business automation platform with AI-powered customer insights and automated outreach systems.
+### [msfconsole-mcp](https://github.com/LYFTIUM-INC/msfconsole-mcp)
+MCP server for the Metasploit Framework - Great functionality coverage for security automation and penetration testing workflows.
 
-### [Hack House](https://www.optinampout.com)
-Security-focused automation platform for penetration testing and vulnerability assessment workflows.
+### [wireshark-mcp](https://github.com/LYFTIUM-INC/wireshark-mcp)
+🦈 Wireshark MCP Server - Enhanced Edition v2.0 for network analysis and packet inspection with AI-powered insights.
 
-### [3 Amigos Biscuits](https://www.optinampout.com)
-E-commerce automation solution with inventory management and customer communication workflows.
+### [ssh-mcp](https://github.com/LYFTIUM-INC/ssh-mcp)
+Enterprise-grade SSH operations with AI intelligence and comprehensive security for automated infrastructure management.
 
-### [Apple Container Hacking](https://github.com/lyftium/apple-container-hacking)
-Advanced security research on macOS containerization and containment bypass techniques.
+### [youtube-mcp-server](https://github.com/LYFTIUM-INC/youtube-mcp-server)
+A Model Context Protocol (MCP) server for YouTube analytics, video processing, and content analysis with ML-powered insights.
+
+### [10x-agentic-setup](https://github.com/LYFTIUM-INC/10x-agentic-setup)
+Advanced agentic AI setup configuration for building sophisticated multi-agent systems and workflows.
+
+### [ltmux-web-interface](https://github.com/LYFTIUM-INC/ltmux-web-interface)
+Modern web interface for terminal management and workflow automation with enhanced user experience.
 
 ---
 
@@ -84,16 +100,19 @@ We run **OptinAmpOut**, an AI consulting and automation company helping business
 - **Boost revenue** through better customer engagement and faster operations
 
 ### Services We Offer
-- **AI Automation** - End-to-end automation solutions
+- **Machine Learning Solutions** - Predictive analytics, NLP, computer vision, and generative AI
+- **Data Engineering** - ETL/ELT pipelines, data warehousing, and real-time data processing
+- **MLOps & Model Deployment** - TensorFlow, PyTorch, AWS, Azure, GCP deployment pipelines
+- **AI Automation** - End-to-end automation solutions with intelligent agents
 - **Context Engineering & Token Optimization** - Cost-effective AI implementations
-- **Token Expenditure Audits** - Optimize your AI spending
-- **Agentic Workflow Creation** - Build intelligent agent systems
-- **Agent Memory Systems** - Persistent AI memory architectures
-- **Custom Software Development** - Tailored solutions for your needs
-- **Web Development** - Modern, performant web applications
-- **Pentesting Automation** - Security assessment automation
-- **MCP Implementation** - Model Context Protocol integration
-- **AI Consultation** - Strategic AI roadmaps and guidance
+- **Token Expenditure Audits** - Optimize your AI spending by up to 40%
+- **Agentic Workflow Creation** - Build intelligent agent systems and multi-agent architectures
+- **Agent Memory Systems** - Persistent AI memory architectures for long-term context
+- **Custom Software Development** - Tailored solutions for your specific needs
+- **Web Development** - Modern, performant web applications with React and TypeScript
+- **Pentesting Automation** - Security assessment automation and vulnerability scanning
+- **MCP Implementation** - Model Context Protocol integration for enhanced AI capabilities
+- **AI Consultation** - Strategic AI roadmaps and guidance for business transformation
 
 ---
 
@@ -104,6 +123,8 @@ We run **OptinAmpOut**, an AI consulting and automation company helping business
 - **Container Security Research** - macOS containerization analysis
 - **Token Optimization Strategies** - Reducing AI costs without sacrificing quality
 - **Automated Pentesting Workflows** - Security assessment automation
+- **Machine Learning for Business** - Predictive analytics implementation guide
+- **Data Pipeline Best Practices** - Building scalable ETL/ELT pipelines
 
 *More content coming soon...*
 
