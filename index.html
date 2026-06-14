@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lyftium - AI Solutions & Automation</title>
+    <title>Lyftium - AI Solutions, Machine Learning & Data Engineering Experts</title>
+    <meta name="description" content="Lyftium: Expert AI/ML consultants specializing in OpenClaw, Hermes Agent, open source LLMs, data engineering, and intelligent automation. Transform your business with cutting-edge AI solutions.">
+    <meta name="keywords" content="AI consulting, machine learning, data engineering, OpenClaw, Hermes Agent, open source LLMs, Llama, Mistral, Nous Hermes, AI automation, MLOps, predictive analytics, NLP, computer vision">
+    <meta name="author" content="Lyftium">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lyftium.github.io">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +30,34 @@
             transform: translateY(-4px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
+        .tech-badge {
+            transition: all 0.2s ease;
+        }
+        .tech-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -44,7 +77,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="py-20 px-6">
+    <section class="py-20 px-6 fade-in">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-5xl font-bold mb-6">
                 Building <span class="gradient-text">intelligent AI systems</span> that actually work
@@ -52,13 +85,18 @@
             <p class="text-xl text-gray-600 mb-8 leading-relaxed">
                 We work with business leaders who want to bring AI and Machine Learning into their operations, without having to translate their reality into "AI language." From predictive analytics to data engineering, we build systems that drive real business results.
             </p>
-            <div class="flex gap-4">
-                <a href="https://www.optinampout.com/contact" target="_blank" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition">
+            <div class="flex gap-4 mb-8">
+                <a href="https://www.optinampout.com/contact" target="_blank" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition shadow-lg">
                     Book a Free Audit
                 </a>
                 <a href="#work" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
                     View Our Work
                 </a>
+            </div>
+            <div class="flex gap-4 flex-wrap">
+                <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">OpenClaw Experts</span>
+                <span class="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Hermes Agent Specialists</span>
+                <span class="px-4 py-2 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Open Source LLMs</span>
             </div>
         </div>
     </section>
@@ -159,6 +197,22 @@
                     <div class="text-sm text-gray-600">TensorFlow, PyTorch, AWS, Azure, GCP pipelines</div>
                 </div>
                 <div class="p-4 rounded-lg bg-gray-50">
+                    <div class="font-medium mb-1">OpenClaw Integration</div>
+                    <div class="text-sm text-gray-600">Personal AI assistants, persistent memory, skill automation</div>
+                </div>
+                <div class="p-4 rounded-lg bg-gray-50">
+                    <div class="font-medium mb-1">Hermes Agent Systems</div>
+                    <div class="text-sm text-gray-600">Self-improving agents, automated skill creation, multi-platform</div>
+                </div>
+                <div class="p-4 rounded-lg bg-gray-50">
+                    <div class="font-medium mb-1">Open Source LLMs</div>
+                    <div class="text-sm text-gray-600">Llama, Mistral, Nous Hermes deployment and optimization</div>
+                </div>
+                <div class="p-4 rounded-lg bg-gray-50">
+                    <div class="font-medium mb-1">Multi-Agent Systems</div>
+                    <div class="text-sm text-gray-600">Parallel sub-agents, RPC communication, coordinated workflows</div>
+                </div>
+                <div class="p-4 rounded-lg bg-gray-50">
                     <div class="font-medium mb-1">Custom AI Agents</div>
                     <div class="text-sm text-gray-600">Connected to your tools, automated workflows</div>
                 </div>
@@ -178,13 +232,70 @@
                     <div class="font-medium mb-1">Context Engineering</div>
                     <div class="text-sm text-gray-600">Token optimization and cost reduction up to 40%</div>
                 </div>
-                <div class="p-4 rounded-lg bg-gray-50">
-                    <div class="font-medium mb-1">MCP Implementation</div>
-                    <div class="text-sm text-gray-600">Model Context Protocol integration</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="py-16 px-6 bg-gradient-to-r from-purple-50 to-indigo-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Our Tech Stack</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-purple-700">Machine Learning & AI</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">TensorFlow</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">PyTorch</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge font-semibold text-purple-600">OpenClaw</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge font-semibold text-purple-600">Hermes Agent</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">LangChain</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Llama</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Mistral</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge font-semibold text-purple-600">Nous Hermes</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Pinecone</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">ChromaDB</span>
+                    </div>
                 </div>
-                <div class="p-4 rounded-lg bg-gray-50">
-                    <div class="font-medium mb-1">Agent Memory Systems</div>
-                    <div class="text-sm text-gray-600">Persistent AI memory for long-term context</div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-purple-700">Data Engineering</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Apache Airflow</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">dbt</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Apache Spark</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Kafka</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Snowflake</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">BigQuery</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Databricks</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Prefect</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Dagster</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-purple-700">Cloud & Infrastructure</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">AWS</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Azure</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">GCP</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Docker</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Kubernetes</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Terraform</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">GitHub Actions</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">ArgoCD</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-purple-700">Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Python</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">TypeScript</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">React</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Next.js</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">Node.js</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">FastAPI</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">MongoDB</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm tech-badge">GraphQL</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -226,15 +337,15 @@
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-8 text-center">Results We Deliver</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
+                <div class="text-center stat-card bg-white p-6 rounded-xl shadow-md">
                     <div class="text-4xl font-bold text-purple-600 mb-2">25%</div>
                     <div class="text-gray-600">Labor Cost Reduction</div>
                 </div>
-                <div class="text-center">
+                <div class="text-center stat-card bg-white p-6 rounded-xl shadow-md">
                     <div class="text-4xl font-bold text-purple-600 mb-2">40%</div>
                     <div class="text-gray-600">AI Cost Optimization</div>
                 </div>
-                <div class="text-center">
+                <div class="text-center stat-card bg-white p-6 rounded-xl shadow-md">
                     <div class="text-4xl font-bold text-purple-600 mb-2">3x</div>
                     <div class="text-gray-600">Productivity Increase</div>
                 </div>

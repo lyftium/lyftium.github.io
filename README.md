@@ -23,6 +23,16 @@ We're AI engineers and automation specialists focused on building practical syst
 - **Feature Engineering** - Data preprocessing, feature selection, and model optimization
 - **Model Monitoring & Observability** - Performance tracking, drift detection, and automated retraining
 
+### AI Agents & Open Source Models
+- **OpenClaw Integration** - Personal AI assistant deployment, persistent memory systems, skill automation
+- **Hermes Agent** - Self-improving agents with automated skill creation and multi-platform gateway
+- **Multi-Agent Systems** - Parallel sub-agents, RPC communication, coordinated workflows
+- **Open Source LLMs** - Llama, Mistral, Nous Hermes, local model deployment and optimization
+- **Agent Memory Systems** - Persistent context, skill documents, cross-session learning
+- **Tool-Calling Agents** - Function calling, API integration, autonomous task execution
+- **Browser Automation** - Web control, form filling, data extraction, vision analysis
+- **Agent Security** - Sandboxing, approval workflows, audit trails
+
 ### AI & Automation
 - **Custom AI Agents** - Building intelligent agents connected to your existing tools and workflows
 - **Workflow Automation** - Removing manual work through intelligent automation pipelines
@@ -41,6 +51,38 @@ We're AI engineers and automation specialists focused on building practical syst
 - **API Development** - RESTful and GraphQL API design and implementation
 - **System Architecture** - Scalable, secure system design patterns
 - **DevOps & CI/CD** - Automated deployment and infrastructure management
+
+---
+
+## Tech Stack
+
+### Machine Learning & AI
+- **Frameworks**: TensorFlow, PyTorch, Scikit-learn, XGBoost
+- **LLMs**: OpenAI GPT, Anthropic Claude, Llama, Mistral, Nous Hermes
+- **Agent Frameworks**: OpenClaw, Hermes Agent, LangChain, AutoGen
+- **Vector Databases**: Pinecone, Weaviate, ChromaDB, FAISS
+- **ML Platforms**: AWS SageMaker, Azure ML, Google Vertex AI
+
+### Data Engineering
+- **ETL/ELT**: Apache Airflow, dbt, Apache Spark, Flink
+- **Databases**: PostgreSQL, MongoDB, Redis, Elasticsearch
+- **Streaming**: Apache Kafka, Apache Pulsar, Kinesis
+- **Data Warehousing**: Snowflake, BigQuery, Redshift, Databricks
+- **Orchestration**: Prefect, Dagster, Luigi, Argo Workflows
+
+### Cloud & Infrastructure
+- **Cloud Providers**: AWS, Azure, Google Cloud Platform
+- **Containerization**: Docker, Kubernetes, Docker Compose
+- **Infrastructure as Code**: Terraform, Pulumi, AWS CDK
+- **CI/CD**: GitHub Actions, GitLab CI, Jenkins, ArgoCD
+- **Monitoring**: Prometheus, Grafana, ELK Stack, Datadog
+
+### Development
+- **Languages**: Python, TypeScript, JavaScript, Go, Rust
+- **Frontend**: React, Next.js, Vue.js, Tailwind CSS
+- **Backend**: Node.js, FastAPI, Django, Flask, Express
+- **Databases**: PostgreSQL, MongoDB, Redis, SQLite
+- **APIs**: REST, GraphQL, gRPC, WebSocket
 
 ---
 
