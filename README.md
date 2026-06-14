@@ -107,8 +107,8 @@ MCP server for the Metasploit Framework - Great functionality coverage for secur
 ### [ssh-mcp](https://github.com/LYFTIUM-INC/ssh-mcp)
 Enterprise-grade SSH operations with AI intelligence and comprehensive security for automated infrastructure management.
 
-### [youtube-mcp-server](https://github.com/LYFTIUM-INC/youtube-mcp-server)
-A Model Context Protocol (MCP) server for YouTube analytics, video processing, and content analysis with ML-powered insights.
+### [hack-house](https://github.com/LYFTIUM-INC/hack-house)
+Security-focused automation platform for penetration testing and vulnerability assessment workflows, helping businesses identify and fix security issues before they become problems.
 
 ### [10x-agentic-setup](https://github.com/LYFTIUM-INC/10x-agentic-setup)
 Advanced agentic AI setup configuration for building sophisticated multi-agent systems and workflows.
