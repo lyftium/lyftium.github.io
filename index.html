@@ -29,6 +29,18 @@
         .skip-link:focus {
             top: 0;
         }
+        html {
+            scroll-behavior: smooth;
+        }
+        *:focus-visible {
+            outline: 3px solid #667eea;
+            outline-offset: 2px;
+        }
+        button:focus-visible,
+        a:focus-visible {
+            outline: 3px solid #667eea;
+            outline-offset: 2px;
+        }
     </style>
 
     <!-- Open Graph Meta Tags -->
@@ -82,8 +94,6 @@
             }
         }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -138,10 +148,10 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
     <!-- Navigation -->
-    <nav class="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+    <nav class="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50" role="navigation" aria-label="Main navigation">
         <div class="max-w-4xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <a href="#" class="flex items-center">
+                <a href="#" class="flex items-center" aria-label="Lyftium Home">
                     <img src="assets/images/logo.png" alt="Lyftium Logo" class="h-8 w-auto">
                 </a>
                 <!-- Desktop Navigation -->
@@ -696,6 +706,35 @@
                     <p class="text-xs text-gray-500 dark:text-gray-400 mt-4 text-center">
                         No spam. Unsubscribe anytime. We respect your privacy.
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-6 bg-white dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">What types of businesses do you work with?</h3>
+                    <p class="text-gray-600 dark:text-gray-300">We specialize in helping small to medium-sized businesses across various industries including retail, manufacturing, professional services, and e-commerce. Our solutions are designed to scale with your business.</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">How long does it take to see results?</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Most clients see initial results within 4-6 weeks of implementation. The timeline depends on the complexity of your automation needs, but we focus on delivering quick wins while building long-term value.</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">Do I need technical expertise to work with you?</h3>
+                    <p class="text-gray-600 dark:text-gray-300">No technical expertise required. We handle all the technical implementation and provide clear explanations in plain language. You focus on running your business, we handle the technology.</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">What makes you different from other AI consultants?</h3>
+                    <p class="text-gray-600 dark:text-gray-300">We focus on practical, business-driven solutions rather than technical complexity. Our team has deep expertise in AI, data engineering, and automation, but we translate that into business results you can measure.</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">How much do your services cost?</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Pricing depends on your specific needs and project scope. We offer flexible engagement models and focus on delivering ROI. Contact us for a free consultation to discuss your requirements and get a customized quote.</p>
                 </div>
             </div>
         </div>
