@@ -9,10 +9,40 @@
     <meta name="author" content="Lyftium">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://lyftium.github.io">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Lyftium - AI Solutions for Small Business | Cut Costs & Boost Productivity">
+    <meta property="og:description" content="Lyftium helps small businesses reduce costs by 25% and increase productivity with practical AI solutions. No technical jargon—just real results that impact your bottom line.">
+    <meta property="og:image" content="https://lyftium.github.io/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://lyftium.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lyftium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lyftium - AI Solutions for Small Business">
+    <meta name="twitter:description" content="Reduce costs by 25% and increase productivity with practical AI solutions.">
+    <meta name="twitter:image" content="https://lyftium.github.io/assets/images/og-image.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            font-display: swap;
+        }
+    </style>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -52,6 +82,10 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        .dark .glass-effect {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
         .stat-card {
             transition: all 0.3s ease;
         }
@@ -72,7 +106,7 @@
                     <a href="#about" class="text-gray-600 hover:text-gray-900 transition">About</a>
                     <a href="#work" class="text-gray-600 hover:text-gray-900 transition">Work</a>
                     <a href="#services" class="text-gray-600 hover:text-gray-900 transition">Services</a>
-                    <a href="https://www.optinampout.com" target="_blank" class="text-purple-600 hover:text-purple-700 font-medium transition">OptinAmpOut →</a>
+                    <a href="https://www.optinampout.com" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-700 font-medium transition">OptinAmpOut →</a>
                 </div>
             </div>
         </div>
@@ -88,7 +122,7 @@
                 We help small businesses automate operations, reduce costs by 25%, and increase productivity with practical AI solutions. No technical jargon—just real results that impact your bottom line.
             </p>
             <div class="flex gap-4 mb-8">
-                <a href="https://www.optinampout.com/contact" target="_blank" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition shadow-lg">
+                <a href="https://www.optinampout.com/contact" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition shadow-lg">
                     Get Free Consultation
                 </a>
                 <a href="#work" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
@@ -111,9 +145,23 @@
                 <p class="mb-4">
                     We understand that small businesses need practical solutions that deliver real results—not expensive technology projects that never get used. Our team specializes in building AI and automation systems that actually work for your business, your budget, and your timeline.
                 </p>
-                <p>
+                <p class="mb-6">
                     We've helped businesses like yours reduce operational costs by 25%, eliminate repetitive tasks, and free up time to focus on growth. No technical jargon, no complex implementations—just straightforward solutions that impact your bottom line from day one.
                 </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 mt-8">
+                <div class="text-center p-4">
+                    <div class="text-3xl font-bold text-purple-600 mb-2">50+</div>
+                    <div class="text-sm text-gray-600">Happy Clients</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-3xl font-bold text-purple-600 mb-2">25%</div>
+                    <div class="text-sm text-gray-600">Avg. Cost Reduction</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-3xl font-bold text-purple-600 mb-2">3x</div>
+                    <div class="text-sm text-gray-600">Productivity Increase</div>
+                </div>
             </div>
         </div>
     </section>
@@ -126,7 +174,7 @@
                 <div class="bg-white rounded-xl p-6 border border-gray-200 card-hover">
                     <div class="flex items-start justify-between">
                         <div>
-                            <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/LYFTIUM-INC/msfconsole-mcp" target="_blank" class="hover:text-purple-600 transition">msfconsole-mcp</a></h3>
+                            <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/LYFTIUM-INC/msfconsole-mcp" target="_blank" rel="noopener noreferrer" class="hover:text-purple-600 transition">msfconsole-mcp</a></h3>
                             <p class="text-gray-600">MCP server for the Metasploit Framework - Great functionality coverage for security automation and penetration testing workflows.</p>
                         </div>
                         <span class="text-xs bg-red-100 text-red-700 px-3 py-1 rounded-full">Security</span>
@@ -135,7 +183,7 @@
                 <div class="bg-white rounded-xl p-6 border border-gray-200 card-hover">
                     <div class="flex items-start justify-between">
                         <div>
-                            <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/LYFTIUM-INC/wireshark-mcp" target="_blank" class="hover:text-purple-600 transition">wireshark-mcp</a></h3>
+                            <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/LYFTIUM-INC/wireshark-mcp" target="_blank" rel="noopener noreferrer" class="hover:text-purple-600 transition">wireshark-mcp</a></h3>
                             <p class="text-gray-600">🦈 Wireshark MCP Server - Enhanced Edition v2.0 for network analysis and packet inspection with AI-powered insights.</p>
                         </div>
                         <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Network</span>
@@ -144,7 +192,7 @@
                 <div class="bg-white rounded-xl p-6 border border-gray-200 card-hover">
                     <div class="flex items-start justify-between">
                         <div>
-                            <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/LYFTIUM-INC/ssh-mcp" target="_blank" class="hover:text-purple-600 transition">ssh-mcp</a></h3>
+                            <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/LYFTIUM-INC/ssh-mcp" target="_blank" rel="noopener noreferrer" class="hover:text-purple-600 transition">ssh-mcp</a></h3>
                             <p class="text-gray-600">Enterprise-grade SSH operations with AI intelligence and comprehensive security for automated infrastructure management.</p>
                         </div>
                         <span class="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">Infrastructure</span>
@@ -153,7 +201,7 @@
                 <div class="bg-white rounded-xl p-6 border border-gray-200 card-hover">
                     <div class="flex items-start justify-between">
                         <div>
-                            <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/LYFTIUM-INC/hack-house" target="_blank" class="hover:text-purple-600 transition">hack-house</a></h3>
+                            <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/LYFTIUM-INC/hack-house" target="_blank" rel="noopener noreferrer" class="hover:text-purple-600 transition">hack-house</a></h3>
                             <p class="text-gray-600">Security-focused automation platform for penetration testing and vulnerability assessment, helping businesses identify and fix security issues before they become problems.</p>
                         </div>
                         <span class="text-xs bg-red-100 text-red-700 px-3 py-1 rounded-full">Security</span>
@@ -162,7 +210,7 @@
                 <div class="bg-white rounded-xl p-6 border border-gray-200 card-hover">
                     <div class="flex items-start justify-between">
                         <div>
-                            <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/LYFTIUM-INC/10x-agentic-setup" target="_blank" class="hover:text-purple-600 transition">10x-agentic-setup</a></h3>
+                            <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/LYFTIUM-INC/10x-agentic-setup" target="_blank" rel="noopener noreferrer" class="hover:text-purple-600 transition">10x-agentic-setup</a></h3>
                             <p class="text-gray-600">Advanced agentic AI setup configuration for building sophisticated multi-agent systems and workflows.</p>
                         </div>
                         <span class="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full">AI Agents</span>
@@ -171,7 +219,7 @@
                 <div class="bg-white rounded-xl p-6 border border-gray-200 card-hover">
                     <div class="flex items-start justify-between">
                         <div>
-                            <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/LYFTIUM-INC/ltmux-web-interface" target="_blank" class="hover:text-purple-600 transition">ltmux-web-interface</a></h3>
+                            <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/LYFTIUM-INC/ltmux-web-interface" target="_blank" rel="noopener noreferrer" class="hover:text-purple-600 transition">ltmux-web-interface</a></h3>
                             <p class="text-gray-600">Modern web interface for terminal management and workflow automation with enhanced user experience.</p>
                         </div>
                         <span class="text-xs bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">Web</span>
@@ -186,29 +234,74 @@
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-8">How We Help Small Businesses</h2>
             <div class="grid md:grid-cols-2 gap-4">
-                <div class="p-4 rounded-lg bg-gray-50">
+                <div class="p-4 rounded-lg bg-gray-50 card-hover">
                     <div class="font-medium mb-1">Business Automation</div>
                     <div class="text-sm text-gray-600">Automate repetitive tasks and free up your team's time</div>
                 </div>
-                <div class="p-4 rounded-lg bg-gray-50">
+                <div class="p-4 rounded-lg bg-gray-50 card-hover">
                     <div class="font-medium mb-1">Cost Reduction</div>
                     <div class="text-sm text-gray-600">Cut operational costs by 25% with smart AI solutions</div>
                 </div>
-                <div class="p-4 rounded-lg bg-gray-50">
+                <div class="p-4 rounded-lg bg-gray-50 card-hover">
                     <div class="font-medium mb-1">Customer Service AI</div>
                     <div class="text-sm text-gray-600">24/7 intelligent support that grows with your business</div>
                 </div>
-                <div class="p-4 rounded-lg bg-gray-50">
+                <div class="p-4 rounded-lg bg-gray-50 card-hover">
                     <div class="font-medium mb-1">Data-Driven Decisions</div>
                     <div class="text-sm text-gray-600">Turn your data into actionable business insights</div>
                 </div>
-                <div class="p-4 rounded-lg bg-gray-50">
+                <div class="p-4 rounded-lg bg-gray-50 card-hover">
                     <div class="font-medium mb-1">Process Optimization</div>
                     <div class="text-sm text-gray-600">Streamline workflows and eliminate bottlenecks</div>
                 </div>
-                <div class="p-4 rounded-lg bg-gray-50">
+                <div class="p-4 rounded-lg bg-gray-50 card-hover">
                     <div class="font-medium mb-1">Custom Solutions</div>
                     <div class="text-sm text-gray-600">Tailored automation that fits your specific needs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-16 px-6 bg-gradient-to-r from-purple-50 to-indigo-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Our Expertise</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-3 text-purple-700">AI & Machine Learning</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>✓ Predictive Analytics</li>
+                        <li>✓ Natural Language Processing</li>
+                        <li>✓ Computer Vision</li>
+                        <li>✓ Generative AI Solutions</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-3 text-purple-700">Data Engineering</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>✓ ETL/ELT Pipelines</li>
+                        <li>✓ Real-time Data Processing</li>
+                        <li>✓ Data Warehousing</li>
+                        <li>✓ Business Intelligence</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-3 text-purple-700">Automation</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>✓ Workflow Automation</li>
+                        <li>✓ Process Optimization</li>
+                        <li>✓ Custom AI Agents</li>
+                        <li>✓ Integration Solutions</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-3 text-purple-700">Security</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>✓ Security Assessments</li>
+                        <li>✓ Vulnerability Testing</li>
+                        <li>✓ Penetration Testing</li>
+                        <li>✓ Security Automation</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -300,10 +393,10 @@
             <h2 class="text-3xl font-bold mb-4">Ready to Grow Your Business?</h2>
             <p class="text-gray-600 mb-8">Get a free consultation and discover how we can help you reduce costs, automate repetitive tasks, and focus on what matters most—growing your business.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://www.optinampout.com/contact" target="_blank" class="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-medium hover:opacity-90 transition">
+                <a href="https://www.optinampout.com/contact" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-medium hover:opacity-90 transition">
                     Get Free Consultation →
                 </a>
-                <a href="https://www.optinampout.com/services" target="_blank" class="inline-block border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-medium hover:bg-purple-50 transition">
+                <a href="https://www.optinampout.com/services" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-medium hover:bg-purple-50 transition">
                     See Our Services
                 </a>
             </div>
@@ -364,6 +457,20 @@
                         <div class="text-sm text-gray-600">We build systems that solve real problems, not technology demos</div>
                     </div>
                 </div>
+                <div class="flex gap-4">
+                    <div class="text-purple-600 text-2xl">✓</div>
+                    <div>
+                        <div class="font-semibold mb-1">Small Business Friendly</div>
+                        <div class="text-sm text-gray-600">Solutions designed for your budget and timeline, no enterprise complexity</div>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="text-purple-600 text-2xl">✓</div>
+                    <div>
+                        <div class="font-semibold mb-1">Ongoing Support</div>
+                        <div class="text-sm text-gray-600">We don't just build and leave—we help you succeed long-term</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -373,8 +480,8 @@
         <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="text-gray-600 text-sm">© 2026 Lyftium. Building intelligent systems.</div>
             <div class="flex gap-6 text-sm">
-                <a href="https://www.optinampout.com" target="_blank" class="text-purple-600 hover:text-purple-700 transition">OptinAmpOut</a>
-                <a href="https://github.com/lyftium" target="_blank" class="text-gray-600 hover:text-gray-900 transition">GitHub</a>
+                <a href="https://www.optinampout.com" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-700 transition">OptinAmpOut</a>
+                <a href="https://github.com/lyftium" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition">GitHub</a>
             </div>
         </div>
     </footer>
