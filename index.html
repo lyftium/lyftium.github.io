@@ -81,6 +81,36 @@
         "areaServed": "Global"
     }
     </script>
+
+    <!-- FAQPage Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "What services does Lyftium offer?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Lyftium offers AI consulting, business automation, cost reduction strategies, and technical implementation services for small businesses."
+            }
+        }, {
+            "@type": "Question",
+            "name": "How can AI help my small business?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AI can help reduce operational costs by 25%, increase productivity by 3x, and automate repetitive tasks so you can focus on growing your business."
+            }
+        }, {
+            "@type": "Question",
+            "name": "Do you offer free consultations?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we offer free consultations to help you understand how AI solutions can benefit your specific business needs."
+            }
+        }]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -511,6 +541,45 @@
         </div>
     </section>
 
+    <!-- Industry Solutions Section -->
+    <section class="py-16 px-6 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Industry-Specific Solutions</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover">
+                    <div class="text-3xl mb-3">🏪</div>
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">Retail & E-commerce</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Inventory optimization, customer personalization, and automated customer support</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover">
+                    <div class="text-3xl mb-3">🏭</div>
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">Manufacturing</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Predictive maintenance, quality control automation, and supply chain optimization</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover">
+                    <div class="text-3xl mb-3">💼</div>
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">Professional Services</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Document automation, client onboarding, and intelligent scheduling</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover">
+                    <div class="text-3xl mb-3">🏥</div>
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">Healthcare</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Patient scheduling, medical record processing, and administrative automation</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover">
+                    <div class="text-3xl mb-3">🏗️</div>
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">Construction</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Project management automation, resource allocation, and safety monitoring</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover">
+                    <div class="text-3xl mb-3">🍽️</div>
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">Hospitality</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Guest experience personalization, booking automation, and staff scheduling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section class="py-16 px-6 bg-gradient-to-r from-purple-50 to-indigo-50">
         <div class="max-w-4xl mx-auto">
@@ -863,7 +932,9 @@
         const mobileMenu = document.getElementById('mobile-menu');
 
         mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', !isHidden);
+            mobileMenuBtn.setAttribute('aria-label', isHidden ? 'Open mobile menu' : 'Close mobile menu');
         });
 
         // Close mobile menu when clicking on a link
@@ -871,6 +942,8 @@
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.setAttribute('aria-label', 'Open mobile menu');
             });
         });
 
@@ -884,9 +957,11 @@
                 filterBtns.forEach(b => {
                     b.classList.remove('bg-purple-600', 'text-white');
                     b.classList.add('bg-gray-100', 'text-gray-700');
+                    b.setAttribute('aria-pressed', 'false');
                 });
                 btn.classList.remove('bg-gray-100', 'text-gray-700');
                 btn.classList.add('bg-purple-600', 'text-white');
+                btn.setAttribute('aria-pressed', 'true');
 
                 // Filter projects
                 const filter = btn.getAttribute('data-filter');
@@ -911,9 +986,11 @@
                 kbFilterBtns.forEach(b => {
                     b.classList.remove('bg-purple-600', 'text-white');
                     b.classList.add('bg-gray-100', 'text-gray-700', 'dark:bg-gray-700', 'dark:text-gray-300');
+                    b.setAttribute('aria-pressed', 'false');
                 });
                 btn.classList.remove('bg-gray-100', 'text-gray-700', 'dark:bg-gray-700', 'dark:text-gray-300');
                 btn.classList.add('bg-purple-600', 'text-white');
+                btn.setAttribute('aria-pressed', 'true');
 
                 // Filter knowledge base items
                 const filter = btn.getAttribute('data-filter');
