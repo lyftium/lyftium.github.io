@@ -10,38 +10,17 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://lyftium.github.io">
 
+    <!-- Security Meta Tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     <!-- Resource Hints for Performance -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
-    <style>
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #0ea5e9;
-            color: white;
-            padding: 8px;
-            z-index: 100;
-            transition: top 0.3s;
-        }
-        .skip-link:focus {
-            top: 0;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        *:focus-visible {
-            outline: 3px solid #0ea5e9;
-            outline-offset: 2px;
-        }
-        button:focus-visible,
-        a:focus-visible {
-            outline: 3px solid #0ea5e9;
-            outline-offset: 2px;
-        }
-    </style>
+    <link rel="stylesheet" href="dist/output.css">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Lyftium - AI Solutions for Small Business | Cut Costs & Boost Productivity">
@@ -111,70 +90,7 @@
         }]
     }
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        .tech-badge {
-            transition: all 0.2s ease;
-        }
-        .tech-badge:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
-        }
-        .fade-in {
-            animation: fadeIn 0.6s ease-in;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
-        }
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .dark .glass-effect {
-            background: rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .stat-card {
-            transition: all 0.3s ease;
-        }
-        .stat-card:hover {
-            transform: scale(1.05);
-        }
-    </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
     <!-- Navigation -->
@@ -182,15 +98,15 @@
         <div class="max-w-4xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <a href="#" class="flex items-center" aria-label="Lyftium Home">
-                    <img src="assets/images/logo.png" alt="Lyftium Logo" class="h-8 w-auto">
+                    <img src="assets/images/logo.png" alt="Lyftium Logo" class="h-8 w-auto" width="32" height="32" loading="lazy">
                 </a>
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex gap-6 text-sm items-center">
                     <a href="#about" class="text-gray-600 hover:text-gray-900 transition">About</a>
                     <a href="#work" class="text-gray-600 hover:text-gray-900 transition">Work</a>
                     <a href="#services" class="text-gray-600 hover:text-gray-900 transition">Services</a>
-                    <a href="https://www.optinampout.com" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 font-medium transition">OptinAmpOut →</a>
-                    <a href="https://www.optinampout.com/contact" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-cyan-500 to-indigo-500 text-white px-4 py-2 rounded-lg font-medium hover:opacity-90 transition shadow-md">
+                    <a href="https://www.optinampout.com" target="_blank" rel="noopener noreferrer" class="text-cyan-700 hover:text-cyan-800 font-medium transition">OptinAmpOut →</a>
+                    <a href="https://www.optinampout.com/contact" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-cyan-600 to-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:opacity-90 transition shadow-md">
                         Contact Us
                     </a>
                     <!-- Dark Mode Toggle -->
@@ -220,7 +136,7 @@
                     <a href="#about" class="text-gray-600 hover:text-gray-900 transition">About</a>
                     <a href="#work" class="text-gray-600 hover:text-gray-900 transition">Work</a>
                     <a href="#services" class="text-gray-600 hover:text-gray-900 transition">Services</a>
-                    <a href="https://www.optinampout.com" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 font-medium transition">OptinAmpOut →</a>
+                    <a href="https://www.optinampout.com" target="_blank" rel="noopener noreferrer" class="text-cyan-700 hover:text-cyan-800 font-medium transition">OptinAmpOut →</a>
                 </div>
             </div>
         </div>
@@ -236,7 +152,7 @@
                 We help small businesses automate operations, reduce costs by 25%, and increase productivity with practical AI solutions. No technical jargon—just real results that impact your bottom line.
             </p>
             <div class="flex gap-4 mb-8">
-                <a href="https://www.optinampout.com/contact" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-cyan-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition shadow-lg">
+                <a href="https://www.optinampout.com/contact" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-cyan-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition shadow-lg">
                     Get Free Consultation
                 </a>
                 <a href="#work" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
@@ -246,7 +162,7 @@
             <div class="flex gap-4 flex-wrap">
                 <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">✓ Save 25% on Labor Costs</span>
                 <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">✓ 3x Productivity Boost</span>
-                <span class="px-4 py-2 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium">✓ No Technical Expertise Needed</span>
+                <span class="px-4 py-2 bg-cyan-200 text-cyan-800 rounded-full text-sm font-medium">✓ No Technical Expertise Needed</span>
             </div>
         </div>
     </section>
@@ -265,15 +181,15 @@
             </div>
             <div class="grid md:grid-cols-3 gap-6 mt-8">
                 <div class="text-center p-4">
-                    <div class="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-2">50+</div>
+                    <div class="text-3xl font-bold text-cyan-700 dark:text-cyan-400 mb-2">50+</div>
                     <div class="text-sm text-gray-600 dark:text-gray-300">Happy Clients</div>
                 </div>
                 <div class="text-center p-4">
-                    <div class="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-2">25%</div>
+                    <div class="text-3xl font-bold text-cyan-700 dark:text-cyan-400 mb-2">25%</div>
                     <div class="text-sm text-gray-600 dark:text-gray-300">Avg. Cost Reduction</div>
                 </div>
                 <div class="text-center p-4">
-                    <div class="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-2">3x</div>
+                    <div class="text-3xl font-bold text-cyan-700 dark:text-cyan-400 mb-2">3x</div>
                     <div class="text-sm text-gray-600 dark:text-gray-300">Productivity Increase</div>
                 </div>
             </div>
@@ -287,7 +203,7 @@
 
             <!-- Project Filter -->
             <div class="flex flex-wrap gap-2 mb-8" id="project-filters" role="group" aria-label="Filter projects by category">
-                <button class="filter-btn active px-4 py-2 rounded-full text-sm font-medium bg-cyan-500 text-white" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-btn active px-4 py-2 rounded-full text-sm font-medium bg-cyan-600 text-white" data-filter="all" aria-pressed="true">All</button>
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200" data-filter="security" aria-pressed="false">Security</button>
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200" data-filter="network" aria-pressed="false">Network</button>
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200" data-filter="infrastructure" aria-pressed="false">Infrastructure</button>
@@ -362,7 +278,7 @@
 
             <!-- Knowledge Base Filter -->
             <div class="flex flex-wrap gap-2 mb-8" id="kb-filters">
-                <button class="kb-filter-btn active px-4 py-2 rounded-full text-sm font-medium bg-cyan-500 text-white" data-filter="all">All</button>
+                <button class="kb-filter-btn active px-4 py-2 rounded-full text-sm font-medium bg-cyan-600 text-white" data-filter="all">All</button>
                 <button class="kb-filter-btn px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600" data-filter="security">Security</button>
                 <button class="kb-filter-btn px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600" data-filter="devops">DevOps</button>
                 <button class="kb-filter-btn px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600" data-filter="hardware">Hardware</button>
@@ -725,12 +641,12 @@
             btn.addEventListener('click', () => {
                 // Update active button styling
                 filterBtns.forEach(b => {
-                    b.classList.remove('bg-cyan-500', 'text-white');
+                    b.classList.remove('bg-cyan-600', 'text-white');
                     b.classList.add('bg-gray-100', 'text-gray-700');
                     b.setAttribute('aria-pressed', 'false');
                 });
                 btn.classList.remove('bg-gray-100', 'text-gray-700');
-                btn.classList.add('bg-cyan-500', 'text-white');
+                btn.classList.add('bg-cyan-600', 'text-white');
                 btn.setAttribute('aria-pressed', 'true');
 
                 // Filter projects
