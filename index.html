@@ -10,6 +10,27 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://lyftium.github.io">
 
+    <!-- Resource Hints for Performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <style>
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #667eea;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Lyftium - AI Solutions for Small Business | Cut Costs & Boost Productivity">
     <meta property="og:description" content="Lyftium helps small businesses reduce costs by 25% and increase productivity with practical AI solutions. No technical jargon—just real results that impact your bottom line.">
@@ -21,6 +42,10 @@
     <meta name="twitter:title" content="Lyftium - AI Solutions for Small Business">
     <meta name="twitter:description" content="Reduce costs by 25% and increase productivity with practical AI solutions.">
     <meta name="twitter:image" content="https://lyftium.github.io/assets/images/og-image.jpg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="main-content">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -653,6 +678,29 @@
         </div>
     </section>
 
+    <!-- Newsletter Section -->
+    <section class="py-16 px-6 bg-white dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 md:p-12">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Get Weekly AI & Automation Insights</h2>
+                    <p class="text-gray-600 dark:text-gray-300">Join 2,000+ small business owners getting practical AI tips, automation strategies, and exclusive insights delivered to their inbox every week.</p>
+                </div>
+                <div class="max-w-md mx-auto">
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Enter your email address" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-600">
+                        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition shadow-lg">
+                            Subscribe to Newsletter
+                        </button>
+                    </form>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-4 text-center">
+                        No spam. Unsubscribe anytime. We respect your privacy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Results Section -->
     <section class="py-16 px-6 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900">
         <div class="max-w-4xl mx-auto">
@@ -729,9 +777,11 @@
     <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-700">
         <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="text-gray-600 dark:text-gray-300 text-sm">© 2026 Lyftium. Building intelligent systems.</div>
-            <div class="flex gap-6 text-sm">
+            <div class="flex gap-6 text-sm items-center">
                 <a href="https://www.optinampout.com" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300 transition">OptinAmpOut</a>
                 <a href="https://github.com/lyftium" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition">GitHub</a>
+                <a href="https://linkedin.com/company/lyftium" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition">LinkedIn</a>
+                <a href="https://twitter.com/lyftium" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition">Twitter</a>
                 <a href="privacy-policy.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition">Privacy Policy</a>
                 <a href="terms-of-service.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition">Terms of Service</a>
             </div>
