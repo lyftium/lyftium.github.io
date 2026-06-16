@@ -1,4 +1,4 @@
-# Lyftium
+# LYFTIUM
 
 **Building intelligent AI systems that actually work.**
 
