@@ -1,0 +1,52 @@
+# LYFTIUM - AI Automation for Retail, Manufacturing & Professional Services
+
+LYFTIUM builds AI learning loop systems and agentic AI solutions for small businesses in retail, manufacturing, and professional services. Our systems compound institutional knowledge, cut costs by 25%, and automate workflows 3x faster.
+
+## Core Services
+
+### Learning Loop Systems
+AI that learns from your business data and improves over time, compounding your institutional knowledge. These systems continuously optimize based on real-world performance data.
+
+### Agentic AI Solutions
+Autonomous AI agents that handle complex workflows 24/7, freeing your team for high-value work. Our agents can automate customer service, order processing, inventory management, and more.
+
+### Model-Agnostic Platform
+Future-proof systems that work across different AI models, protecting you from vendor lock-in. Switch between models as technology evolves without rebuilding your infrastructure.
+
+### Enterprise AI Resilience
+Systems resilient to model changes and market disruptions, ensuring business continuity. Build AI systems that adapt and maintain performance through changing conditions.
+
+## Target Industries
+
+- **Retail & E-commerce**: Inventory optimization, customer personalization, automated customer support
+- **Manufacturing**: Predictive maintenance, quality control automation, supply chain optimization
+- **Professional Services**: Document automation, client communication, workflow optimization
+
+## Key Benefits
+
+- Cut operational costs by 25%
+- Automate workflows 3x faster
+- 90% time savings on repetitive tasks
+- 70% cost reduction in operations
+- 4x faster response times
+
+## Pricing
+
+- **Starter**: $997/project - Single automation project, 2-week implementation
+- **Growth**: $2,497/month - Multiple automations, ongoing optimization, priority support
+
+## Contact
+
+- Email: contact@lyftium.com
+- Website: https://lyftium.github.io
+- GitHub: https://github.com/lyftium
+
+## Resources
+
+- Blog: https://lyftium.github.io/blog/building-ai-learning-loops.html
+- AI Readiness Assessment: https://lyftium.github.io/ai-readiness-assessment.html
+- Service Pages:
+  - Learning Loop Systems: https://lyftium.github.io/learning-loop-systems.html
+  - Agentic AI Solutions: https://lyftium.github.io/agentic-ai-solutions.html
+  - Model-Agnostic Platform: https://lyftium.github.io/model-agnostic-platform.html
+  - Enterprise AI Resilience: https://lyftium.github.io/enterprise-ai-resilience.html
