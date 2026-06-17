@@ -1,3 +1,28 @@
+# Allow retrieval-focused AI crawlers for AI search visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Block aggressive training scrapers that consume resources without attribution
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+# Allow all other crawlers
 User-agent: *
 Allow: /
+
 Sitemap: https://lyftium.github.io/sitemap.xml
