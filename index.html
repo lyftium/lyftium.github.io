@@ -69,6 +69,65 @@
             background-clip: text;
         }
 
+        /* CTA Button Enhancements */
+        .cta-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Link Hover Effects */
+        .link-hover {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #0891b2, #6366f1);
+            transition: width 0.3s ease;
+        }
+
+        .link-hover:hover::after {
+            width: 100%;
+        }
+
+        /* Card Entrance Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card-animate {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
         /* Section Spacing */
         section {
             scroll-margin-top: 80px;
@@ -356,11 +415,11 @@
                 </a>
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex gap-6 text-sm items-center">
-                    <a href="#services" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition font-medium">Services</a>
-                    <a href="use-cases/inventory-automation.html" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition font-medium">Use Cases</a>
-                    <a href="integrations.html" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition font-medium">Integrations</a>
-                    <a href="pricing.html" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition font-medium">Pricing</a>
-                    <a href="ai-readiness-assessment.html" class="bg-gradient-to-r from-cyan-600 to-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:opacity-90 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <a href="#services" class="link-hover text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition font-medium">Services</a>
+                    <a href="use-cases/inventory-automation.html" class="link-hover text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition font-medium">Use Cases</a>
+                    <a href="integrations.html" class="link-hover text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition font-medium">Integrations</a>
+                    <a href="pricing.html" class="link-hover text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition font-medium">Pricing</a>
+                    <a href="ai-readiness-assessment.html" class="cta-button bg-gradient-to-r from-cyan-600 to-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:opacity-90 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                         Get Started
                     </a>
                     <!-- Dark Mode Toggle -->
@@ -411,7 +470,7 @@
                 Understanding your business should be the only prerequisite to automating it. Build AI agents that learn from your data, compound your knowledge, and run 24/7 in the background.
             </p>
             <div class="flex gap-4 mb-8 justify-center flex-wrap">
-                <a href="ai-readiness-assessment.html" class="bg-gradient-to-r from-cyan-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-medium hover:opacity-90 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 min-h-[48px] flex items-center justify-center hover-lift">
+                <a href="ai-readiness-assessment.html" class="cta-button bg-gradient-to-r from-cyan-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-medium hover:opacity-90 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 min-h-[48px] flex items-center justify-center hover-lift">
                     Build Your First Agent →
                 </a>
                 <a href="#services" class="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition min-h-[48px] flex items-center justify-center hover-lift">
@@ -427,9 +486,10 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 px-6 bg-white dark:bg-gray-900">
+    <section id="about" class="py-20 px-6 bg-white dark:bg-gray-900">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Why Retail, Manufacturing & Professional Services Choose Us</h2>
+            <h2 class="text-3xl font-bold mb-4 text-center text-gray-900 dark:text-white">Why Retail, Manufacturing & Professional Services Choose Us</h2>
+            <p class="text-center text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">Practical AI solutions that deliver real results for your industry</p>
             <div class="prose prose-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                 <p class="mb-4">
                     We understand that retail, manufacturing, and professional services businesses need practical solutions that deliver real results—not expensive technology projects that never get used. Our team specializes in building AI and automation systems that actually work for your industry, your budget, and your timeline.
@@ -456,9 +516,10 @@
     </section>
 
     <!-- Founder Section -->
-    <section class="py-16 px-6 bg-white dark:bg-gray-900">
+    <section class="py-20 px-6 bg-white dark:bg-gray-900">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">About the Founder</h2>
+            <h2 class="text-3xl font-bold mb-4 text-center text-gray-900 dark:text-white">About the Founder</h2>
+            <p class="text-center text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">Building AI systems that help small businesses compete with enterprise capabilities</p>
             <div class="flex flex-col md:flex-row items-center gap-8">
                 <div class="w-32 h-32 bg-gradient-to-br from-cyan-500 to-indigo-500 rounded-full flex items-center justify-center text-white text-4xl font-bold flex-shrink-0">
                     PH
@@ -480,23 +541,24 @@
     </section>
 
     <!-- Team Section -->
-    <section class="py-16 px-6 bg-gradient-to-r from-cyan-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900">
+    <section class="py-20 px-6 bg-gradient-to-r from-cyan-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Meet Our Team</h2>
+            <h2 class="text-3xl font-bold mb-4 text-center text-gray-900 dark:text-white">Meet Our Team</h2>
+            <p class="text-center text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">Experts in AI automation dedicated to your success</p>
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover text-center hover-lift">
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover text-center hover-lift card-animate" style="animation-delay: 0.1s">
                     <div class="w-20 h-20 bg-gradient-to-r from-cyan-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">PL</div>
                     <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Pierre</h3>
                     <p class="text-sm text-cyan-600 dark:text-cyan-400 mb-3">Founder & AI Engineer</p>
                     <p class="text-sm text-gray-600 dark:text-gray-300">Expert in machine learning, data engineering, and AI automation with 10+ years of experience building intelligent systems.</p>
                 </div>
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover text-center hover-lift">
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover text-center hover-lift card-animate" style="animation-delay: 0.2s">
                     <div class="w-20 h-20 bg-gradient-to-r from-cyan-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">AF</div>
                     <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Andre Frank</h3>
                     <p class="text-sm text-cyan-600 dark:text-cyan-400 mb-3">AI Specialist</p>
                     <p class="text-sm text-gray-600 dark:text-gray-300">Expert in machine learning, natural language processing, and AI automation with 8+ years of experience implementing practical AI solutions.</p>
                 </div>
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover text-center hover-lift">
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover text-center hover-lift card-animate" style="animation-delay: 0.3s">
                     <div class="w-20 h-20 bg-gradient-to-r from-cyan-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">BS</div>
                     <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Business Strategists</h3>
                     <p class="text-sm text-cyan-600 dark:text-cyan-400 mb-3">Consulting Team</p>
@@ -507,10 +569,10 @@
     </section>
 
     <!-- Use Cases Section -->
-    <section class="py-16 px-6 bg-gradient-to-r from-cyan-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900">
+    <section class="py-20 px-6 bg-gradient-to-r from-cyan-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-4 text-center text-gray-900 dark:text-white">Use Cases</h2>
-            <p class="text-center text-gray-600 dark:text-gray-300 mb-8">AI agents that automate specific workflows and learn from your data</p>
+            <p class="text-center text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">AI agents that automate specific workflows and learn from your data</p>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover hover-lift">
                     <div class="text-3xl mb-3">📊</div>
@@ -541,9 +603,10 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-16 px-6 bg-white dark:bg-gray-900">
+    <section class="py-20 px-6 bg-white dark:bg-gray-900">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">What Our Clients Say</h2>
+            <h2 class="text-3xl font-bold mb-4 text-center text-gray-900 dark:text-white">What Our Clients Say</h2>
+            <p class="text-center text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">Trusted by businesses to transform their operations with AI automation</p>
             <div class="grid gap-6">
                 <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover-lift">
                     <div class="flex items-start gap-4">
