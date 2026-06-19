@@ -1142,6 +1142,63 @@
         </div>
     </section>
 
+    <!-- ROI Calculator Section -->
+    <section class="py-16 px-6 bg-gradient-to-br from-cyan-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-4 text-center text-gray-900 dark:text-white">Calculate Your AI Automation ROI</h2>
+            <p class="text-center text-gray-600 dark:text-gray-300 mb-8">Estimate your potential savings with AI learning loop systems</p>
+
+            <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 border border-gray-200 dark:border-gray-700">
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Hours spent on repetitive tasks per week</label>
+                        <input type="number" id="hours-per-week" value="20" min="1" max="168" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-600">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Average hourly wage ($)</label>
+                        <input type="number" id="hourly-wage" value="50" min="1" max="500" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-600">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Current error rate (%)</label>
+                        <input type="number" id="error-rate" value="15" min="0" max="100" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-600">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Cost per error ($)</label>
+                        <input type="number" id="error-cost" value="100" min="1" max="10000" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-600">
+                    </div>
+                </div>
+
+                <button onclick="calculateROI()" class="w-full bg-gradient-to-r from-cyan-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition shadow-lg mb-8">
+                    Calculate Savings
+                </button>
+
+                <div id="roi-results" class="hidden">
+                    <div class="border-t border-gray-200 dark:border-gray-700 pt-8">
+                        <h3 class="text-xl font-bold mb-6 text-center text-gray-900 dark:text-white">Your Estimated Annual Savings</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="text-center p-6 bg-gradient-to-br from-cyan-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 rounded-xl">
+                                <div class="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-2" id="time-savings">0</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-300">Hours Saved/Year</div>
+                            </div>
+                            <div class="text-center p-6 bg-gradient-to-br from-cyan-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 rounded-xl">
+                                <div class="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-2" id="cost-savings">$0</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-300">Labor Savings/Year</div>
+                            </div>
+                            <div class="text-center p-6 bg-gradient-to-br from-cyan-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 rounded-xl">
+                                <div class="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-2" id="error-savings">$0</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-300">Error Cost Savings/Year</div>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <div class="text-4xl font-bold text-gray-900 dark:text-white mb-2" id="total-savings">$0</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-300">Total Annual Savings</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Newsletter Section -->
     <section class="py-16 px-6 bg-gradient-to-r from-cyan-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900">
         <div class="max-w-4xl mx-auto">
@@ -1661,6 +1718,33 @@
     <!-- JavaScript for Mobile Menu, Dark Mode, and Countdown Timer -->
     <script src="dist/main.js" defer></script>
     <script>
+        // ROI Calculator
+        function calculateROI() {
+            const hoursPerWeek = parseFloat(document.getElementById('hours-per-week').value) || 0;
+            const hourlyWage = parseFloat(document.getElementById('hourly-wage').value) || 0;
+            const errorRate = parseFloat(document.getElementById('error-rate').value) || 0;
+            const errorCost = parseFloat(document.getElementById('error-cost').value) || 0;
+
+            // AI automation saves 75% of time on repetitive tasks
+            const timeSavingsPerWeek = hoursPerWeek * 0.75;
+            const timeSavingsPerYear = timeSavingsPerWeek * 52;
+            const laborSavingsPerYear = timeSavingsPerYear * hourlyWage;
+
+            // AI reduces errors by 80%
+            const errorSavingsPerYear = (errorRate / 100) * errorCost * 52 * hoursPerWeek * 0.8;
+
+            const totalSavings = laborSavingsPerYear + errorSavingsPerYear;
+
+            // Update display
+            document.getElementById('time-savings').textContent = Math.round(timeSavingsPerYear).toLocaleString();
+            document.getElementById('cost-savings').textContent = '$' + Math.round(laborSavingsPerYear).toLocaleString();
+            document.getElementById('error-savings').textContent = '$' + Math.round(errorSavingsPerYear).toLocaleString();
+            document.getElementById('total-savings').textContent = '$' + Math.round(totalSavings).toLocaleString();
+
+            // Show results
+            document.getElementById('roi-results').classList.remove('hidden');
+        }
+
         // Countdown Timer - Expires at end of current month
         function updateCountdown() {
             const now = new Date();
