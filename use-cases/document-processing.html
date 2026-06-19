@@ -74,6 +74,48 @@
         }]
     }
     </script>
+
+    <!-- Service Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Document Processing Service",
+        "description": "Automate document processing with AI learning loop systems. Extract data from invoices, contracts, and forms with AI that learns your document formats and business rules. 80% faster processing, 95% accuracy.",
+        "provider": {
+            "@type": "Organization",
+            "name": "LYFTIUM",
+            "url": "https://lyftium.github.io"
+        },
+        "areaServed": ["Finance", "Legal", "Healthcare", "Professional Services"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Document Processing Solutions",
+            "itemListElement": [{
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Invoice Automation"
+                },
+                "description": "AI-powered invoice data extraction and processing with format-aware learning"
+            }, {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Contract Processing"
+                },
+                "description": "Automated contract review and data extraction with legal document understanding"
+            }, {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Form Automation"
+                },
+                "description": "Intelligent form data extraction and validation with adaptive learning capabilities"
+            }]
+        }
+    }
+    </script>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
     <a href="#main-content" class="skip-link">Skip to main content</a>
