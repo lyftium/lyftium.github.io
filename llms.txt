@@ -46,7 +46,16 @@ Systems resilient to model changes and market disruptions, ensuring business con
 - Blog: https://lyftium.github.io/blog/building-ai-learning-loops.html
 - AI Readiness Assessment: https://lyftium.github.io/ai-readiness-assessment.html
 - Service Pages:
-  - Learning Loop Systems: https://lyftium.github.io/learning-loop-systems.html
+  - AI Learning Loop Systems: https://lyftium.github.io/ai-learning-loop-systems.html
   - Agentic AI Solutions: https://lyftium.github.io/agentic-ai-solutions.html
   - Model-Agnostic Platform: https://lyftium.github.io/model-agnostic-platform.html
   - Enterprise AI Resilience: https://lyftium.github.io/enterprise-ai-resilience.html
+- Use Cases:
+  - Inventory Automation: https://lyftium.github.io/use-cases/inventory-automation.html
+  - Customer Support Automation: https://lyftium.github.io/use-cases/customer-support-automation.html
+  - Document Processing: https://lyftium.github.io/use-cases/document-processing.html
+  - Data Analysis & Reporting: https://lyftium.github.io/use-cases/data-analysis-reporting.html
+- Open Source:
+  - GOLLAMC: https://lyftium.github.io/gollamc.html
+- Pricing: https://lyftium.github.io/pricing.html
+- Integrations: https://lyftium.github.io/integrations.html
