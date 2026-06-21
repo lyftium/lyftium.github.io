@@ -87,6 +87,9 @@
     <!-- Lottie Player for Logo Animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
 
+    <!-- Stripe.js for Payment Processing -->
+    <script src="https://js.stripe.com/v3/" defer></script>
+
     <style>
         /* Animated Gradient Background */
         .animated-gradient-bg {
@@ -222,6 +225,67 @@
             height: 32px;
             fill: #0891b2;
             margin-left: 4px;
+        }
+
+        /* Lead Capture Form */
+        .lead-capture-form {
+            max-width: 400px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(8, 145, 178, 0.2);
+        }
+
+        .dark .lead-capture-form {
+            background: #1f2937;
+            border-color: rgba(8, 145, 178, 0.3);
+        }
+
+        .lead-capture-form input,
+        .lead-capture-form select {
+            width: 100%;
+            padding: 12px 16px;
+            margin-bottom: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+            color: #1f2937;
+        }
+
+        .lead-capture-form input:focus,
+        .lead-capture-form select:focus {
+            outline: none;
+            border-color: #0891b2;
+            box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.1);
+        }
+
+        .lead-capture-form button {
+            width: 100%;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #0891b2, #6366f1);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(8, 145, 178, 0.3);
+        }
+
+        .lead-capture-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(8, 145, 178, 0.4);
+        }
+
+        .lead-capture-form button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
         }
 
         /* CTA Button Enhancements */
@@ -710,9 +774,23 @@
                 </div>
             </div>
             <div class="flex gap-4 mb-8 justify-center flex-wrap items-center">
-                <a href="https://www.optinampout.com" class="cta-button bg-gradient-to-r from-cyan-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 min-h-[48px] flex items-center justify-center hover-lift">
-                    Try AI Automation Free - Takes 2 min →
-                </a>
+                <!-- Lead Capture Form -->
+                <div class="lead-capture-form">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 text-center">Get Your Free AI Assessment</h3>
+                    <form id="lead-capture-form" class="space-y-4">
+                        <input type="text" id="lead-name" placeholder="Your Name" required>
+                        <input type="email" id="lead-email" placeholder="Your Email" required>
+                        <select id="lead-industry" required>
+                            <option value="">Select Your Industry</option>
+                            <option value="retail">Retail</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="professional">Professional Services</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <button type="submit" id="lead-submit-btn">Get Free Assessment →</button>
+                    </form>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-4 text-center">No credit card required • Takes 2 minutes</p>
+                </div>
             </div>
 
             <!-- Social Proof Near CTA -->
@@ -1204,19 +1282,19 @@
     <!-- Pricing Section -->
     <section class="py-16 px-6 bg-white dark:bg-gray-900">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Flexible Pricing Options</h2>
-            <p class="text-center text-gray-600 dark:text-gray-300 mb-8">Choose the plan that fits your business needs. All plans include a free consultation.</p>
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Simple Pricing Plans</h2>
+            <p class="text-center text-gray-600 dark:text-gray-300 mb-8">Pick the plan that works for you. Start with a free trial.</p>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Starter</h3>
                     <div class="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">$997<span class="text-sm font-normal text-gray-600 dark:text-gray-300">/project</span></div>
                     <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 mb-6">
-                        <li>✓ Single automation project</li>
-                        <li>✓ 2-week implementation</li>
+                        <li>✓ One automation project</li>
+                        <li>✓ 2-week setup</li>
                         <li>✓ Basic training</li>
                         <li>✓ 30-day support</li>
                     </ul>
-                    <a href="https://www.optinampout.com/contact" target="_blank" rel="noopener noreferrer" class="block text-center border border-cyan-600 text-cyan-600 dark:text-cyan-400 px-4 py-2 rounded-lg font-medium hover:bg-cyan-50 dark:hover:bg-gray-700 transition">Get Started</a>
+                    <button onclick="startStripeCheckout('starter')" class="block w-full text-center border border-cyan-600 text-cyan-600 dark:text-cyan-400 px-4 py-2 rounded-lg font-medium hover:bg-cyan-50 dark:hover:bg-gray-700 transition">Start Free Trial →</button>
                 </div>
                 <div class="bg-gradient-to-br from-cyan-600 to-indigo-600 rounded-xl p-6 border-2 border-cyan-600 card-hover text-white">
                     <div class="text-xs font-medium mb-2 bg-white/20 rounded-full px-3 py-1 inline-block">Most Popular</div>
@@ -1224,26 +1302,27 @@
                     <div class="text-3xl font-bold mb-4">$2,497<span class="text-sm font-normal text-cyan-100">/month</span></div>
                     <ul class="space-y-2 text-sm text-cyan-100 mb-6">
                         <li>✓ Multiple automations</li>
-                        <li>✓ Ongoing optimization</li>
+                        <li>✓ Ongoing help</li>
                         <li>✓ Priority support</li>
                         <li>✓ Monthly strategy calls</li>
                         <li>✓ Advanced analytics</li>
                     </ul>
-                    <a href="https://www.optinampout.com/contact" target="_blank" rel="noopener noreferrer" class="block text-center bg-white text-cyan-600 px-4 py-2 rounded-lg font-medium hover:bg-cyan-50 transition">Get Started</a>
+                    <button onclick="startStripeCheckout('growth')" class="block w-full text-center bg-white text-cyan-600 px-4 py-2 rounded-lg font-medium hover:bg-cyan-50 transition">Start Free Trial →</button>
                 </div>
                 <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 card-hover">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Enterprise</h3>
                     <div class="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">Custom</div>
                     <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 mb-6">
-                        <li>✓ Full-scale transformation</li>
+                        <li>✓ Full setup</li>
                         <li>✓ Dedicated team</li>
                         <li>✓ Custom integrations</li>
                         <li>✓ 24/7 support</li>
                         <li>✓ SLA guarantee</li>
                     </ul>
-                    <a href="https://www.optinampout.com/contact" target="_blank" rel="noopener noreferrer" class="block text-center border border-cyan-600 text-cyan-600 dark:text-cyan-400 px-4 py-2 rounded-lg font-medium hover:bg-cyan-50 dark:hover:bg-gray-700 transition">Contact Us</a>
+                    <button onclick="startStripeCheckout('enterprise')" class="block w-full text-center border border-cyan-600 text-cyan-600 dark:text-cyan-400 px-4 py-2 rounded-lg font-medium hover:bg-cyan-50 dark:hover:bg-gray-700 transition">Contact Us →</button>
                 </div>
             </div>
+            <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-6">7-day free trial • Cancel anytime • No credit card for trial</p>
         </div>
     </section>
 
@@ -2006,6 +2085,54 @@
             document.addEventListener('DOMContentLoaded', initScrollAnimations);
         } else {
             initScrollAnimations();
+        }
+
+        // Lead Capture Form Handler
+        document.getElementById('lead-capture-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('lead-name').value;
+            const email = document.getElementById('lead-email').value;
+            const industry = document.getElementById('lead-industry').value;
+            const submitBtn = document.getElementById('lead-submit-btn');
+
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Processing...';
+
+            // Store lead data (in production, send to your backend)
+            const leadData = {
+                name: name,
+                email: email,
+                industry: industry,
+                timestamp: new Date().toISOString()
+            };
+
+            console.log('Lead captured:', leadData);
+
+            // Simulate API call (replace with actual backend call)
+            setTimeout(() => {
+                // Redirect to optinampout.com with lead data
+                const redirectUrl = `https://www.optinampout.com?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&industry=${encodeURIComponent(industry)}`;
+                window.location.href = redirectUrl;
+            }, 1000);
+        });
+
+        // Stripe Checkout Handler
+        function startStripeCheckout(plan) {
+            // In production, this would call your backend to create a Stripe Checkout Session
+            // For now, redirect to optinampout.com with plan selection
+            const planPrices = {
+                'starter': 'price_starter_997',
+                'growth': 'price_growth_2497',
+                'enterprise': 'price_enterprise_custom'
+            };
+
+            console.log('Starting Stripe Checkout for plan:', plan);
+
+            // Redirect to optinampout.com with plan info
+            const redirectUrl = `https://www.optinampout.com?plan=${plan}&priceId=${planPrices[plan]}`;
+            window.location.href = redirectUrl;
         }
 
         // Chat Modal Toggle
