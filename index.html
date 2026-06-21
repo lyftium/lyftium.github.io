@@ -3,12 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LYFTIUM - AI Automation That Learns | 25% Cost Reduction</title>
-    <meta name="description" content="AI automation for retail, manufacturing & professional services. Cut costs by 25%, automate workflows 3x faster. Book free consultation.">
-    <meta name="keywords" content="AI automation, learning loop systems, agentic AI, retail automation, manufacturing automation, professional services AI, small business AI, workflow automation, AI consulting">
+    <title>LYFTIUM - AI Automation That Learns | Save 20+ Hours Weekly</title>
+    <meta name="description" content="Save 20+ hours every week with AI automation. Retail, manufacturing & professional services cut costs by 25%. Start free trial today.">
+    <meta name="keywords" content="AI automation, learning loop systems, agentic AI, retail automation, manufacturing automation, professional services AI, small business AI, workflow automation, AI consulting, cost reduction">
     <meta name="author" content="LYFTIUM">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://lyftium.github.io">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="LYFTIUM - AI Automation That Learns | Save 20+ Hours Weekly">
+    <meta property="og:description" content="Save 20+ hours every week with AI automation. Retail, manufacturing & professional services cut costs by 25%. Start free trial today.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lyftium.github.io">
+    <meta property="og:image" content="https://lyftium.github.io/assets/images/logo.png">
+    <meta property="og:site_name" content="LYFTIUM">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LYFTIUM - AI Automation That Learns | Save 20+ Hours Weekly">
+    <meta name="twitter:description" content="Save 20+ hours every week with AI automation. Retail, manufacturing & professional services cut costs by 25%. Start free trial today.">
+    <meta name="twitter:image" content="https://lyftium.github.io/assets/images/logo.png">
+    <meta name="twitter:site" content="@lyftium">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#0891b2">
+    <meta name="msapplication-TileColor" content="#0891b2">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <link rel="manifest" href="/manifest.json">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -22,7 +44,8 @@
             "@type": "Offer",
             "price": "997",
             "priceCurrency": "USD",
-            "description": "AI automation solutions starting at $997"
+            "description": "AI automation solutions starting at $997",
+            "availability": "https://schema.org/InStock"
         },
         "aggregateRating": {
             "@type": "AggregateRating",
@@ -36,7 +59,9 @@
             "@type": "Organization",
             "name": "LYFTIUM",
             "url": "https://lyftium.github.io"
-        }
+        },
+        "featureList": "Business Automation, Cost Reduction, Tool Integration, Model-Agnostic, Background Automation, Multi-Agent Workflows",
+        "applicationSuite": "AI Automation Platform"
     }
     </script>
 
@@ -51,13 +76,53 @@
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "sales",
-            "email": "contact@lyftium.com"
+            "email": "contact@lyftium.com",
+            "availableLanguage": "English"
         },
         "sameAs": [
             "https://github.com/lyftium",
             "https://linkedin.com/company/lyftium",
             "https://twitter.com/lyftium"
-        ]
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+        },
+        "founder": "LYFTIUM Team"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "LYFTIUM AI Automation",
+        "description": "AI automation platform for retail, manufacturing & professional services",
+        "brand": {
+            "@type": "Brand",
+            "name": "LYFTIUM"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Starter Plan",
+                "price": "997",
+                "priceCurrency": "USD",
+                "description": "Single automation project with 2-week implementation"
+            },
+            {
+                "@type": "Offer",
+                "name": "Growth Plan",
+                "price": "2497",
+                "priceCurrency": "USD",
+                "description": "Monthly subscription with ongoing optimization"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "50"
+        }
     }
     </script>
 
@@ -73,8 +138,10 @@
     <link rel="dns-prefetch" href="https://github.com">
     <link rel="dns-prefetch" href="https://www.optinampout.com">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://js.stripe.com">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     <link rel="preload" href="dist/output.css" as="style">
+    <link rel="preload" href="assets/images/logo.png" as="image">
     <link rel="stylesheet" href="dist/output.css">
 
     <!-- tsParticles Library -->
@@ -89,6 +156,82 @@
 
     <!-- Stripe.js for Payment Processing -->
     <script src="https://js.stripe.com/v3/" defer></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- A/B Testing Framework -->
+    <script>
+        // Simple A/B Testing Framework
+        const ABTest = {
+            variants: {
+                hero: ['control', 'variant_a', 'variant_b'],
+                pricing: ['control', 'variant_a']
+            },
+
+            getVariant(testName) {
+                // Check URL parameter first
+                const urlParams = new URLSearchParams(window.location.search);
+                const forcedVariant = urlParams.get(`ab_${testName}`);
+                if (forcedVariant && this.variants[testName].includes(forcedVariant)) {
+                    return forcedVariant;
+                }
+
+                // Check localStorage
+                const storedVariant = localStorage.getItem(`ab_${testName}`);
+                if (storedVariant && this.variants[testName].includes(storedVariant)) {
+                    return storedVariant;
+                }
+
+                // Random assignment
+                const variant = this.variants[testName][Math.floor(Math.random() * this.variants[testName].length)];
+                localStorage.setItem(`ab_${testName}`, variant);
+
+                // Track variant assignment
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'ab_test_variant', {
+                        'event_category': 'ab_testing',
+                        'event_label': `${testName}_${variant}`,
+                        'value': 1
+                    });
+                }
+
+                return variant;
+            },
+
+            applyVariants() {
+                const heroVariant = this.getVariant('hero');
+                const pricingVariant = this.getVariant('pricing');
+
+                // Apply hero variants
+                if (heroVariant === 'variant_a') {
+                    document.body.classList.add('hero-variant-a');
+                } else if (heroVariant === 'variant_b') {
+                    document.body.classList.add('hero-variant-b');
+                }
+
+                // Apply pricing variants
+                if (pricingVariant === 'variant_a') {
+                    document.body.classList.add('pricing-variant-a');
+                }
+
+                console.log('A/B Test Variants:', { hero: heroVariant, pricing: pricingVariant });
+            }
+        };
+
+        // Initialize A/B testing on DOM ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => ABTest.applyVariants());
+        } else {
+            ABTest.applyVariants();
+        }
+    </script>
 
     <style>
         /* Animated Gradient Background */
@@ -2096,6 +2239,34 @@
             const industry = document.getElementById('lead-industry').value;
             const submitBtn = document.getElementById('lead-submit-btn');
 
+            // Track lead capture event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'generate_lead', {
+                    'event_category': 'lead_generation',
+                    'event_label': industry,
+                    'value': 1
+                });
+            }
+
+            // Send lead to email marketing platform (placeholder)
+            // In production, integrate with your email marketing service
+            // Example: Mailchimp, ConvertKit, ActiveCampaign, etc.
+            const emailData = {
+                email: email,
+                name: name,
+                industry: industry,
+                source: 'lyftium_hero_form',
+                tags: ['lead', 'free_assessment', industry]
+            };
+
+            console.log('Email marketing data:', emailData);
+            // Uncomment and replace with actual API call:
+            // fetch('https://your-email-marketing-api.com/subscribe', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(emailData)
+            // });
+
             // Disable button and show loading state
             submitBtn.disabled = true;
             submitBtn.textContent = 'Processing...';
@@ -2120,6 +2291,20 @@
 
         // Stripe Checkout Handler
         function startStripeCheckout(plan) {
+            // Track checkout initiation event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'begin_checkout', {
+                    'event_category': 'ecommerce',
+                    'event_label': plan,
+                    'items': [{
+                        'item_id': plan,
+                        'item_name': plan + '_plan',
+                        'price': plan === 'starter' ? '997' : plan === 'growth' ? '2497' : 'custom',
+                        'quantity': 1
+                    }]
+                });
+            }
+
             // In production, this would call your backend to create a Stripe Checkout Session
             // For now, redirect to optinampout.com with plan selection
             const planPrices = {
