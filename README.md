@@ -12,6 +12,7 @@ Personal portfolio index for public AI integration work.
 | [lora-finetune-recipe](https://github.com/lyftium/lora-finetune-recipe) | Baseline-first LoRA, lineage, DDP mechanics |
 | [vllm-serving-benchmark-t4](https://github.com/lyftium/vllm-serving-benchmark-t4) | Measured vLLM serving study (2×T4) |
 | [agent-gateway-stack](https://github.com/lyftium/agent-gateway-stack) | AI gateway + tool-calling agent |
+| [off-policy-bandit-evaluation](https://github.com/lyftium/off-policy-bandit-evaluation) | Off-policy evaluation on real bandit logs |
 
 Also: [Kaggle](https://www.kaggle.com/lyftium) · profile README at [github.com/lyftium](https://github.com/lyftium).
 
