@@ -18,3 +18,9 @@ Also: [Kaggle](https://www.kaggle.com/lyftium) · profile README at [github.com/
 ## Honesty
 
 Public demos state what was measured and what was not applied on a live cluster. This Pages site is not a product catalogue and does not claim production OpenShift or multi-cloud ops experience.
+
+## Domain note
+
+**Canonical portfolio URL:** https://lyftium.github.io/
+
+Any other hostname that still shows a legacy product (for example a third-party Cloudflare site) is **out of scope** for this portfolio and is not evidence for AI integration work.
