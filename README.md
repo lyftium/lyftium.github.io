@@ -1,6 +1,6 @@
 # lyftium.github.io
 
-Personal portfolio index for public AI integration work.
+Personal portfolio index for public **data science** (evaluation, OPE, baselines) and **AI integration** (API → Kind → GHCR) work.
 
 **Live site:** [lyftium.github.io](https://lyftium.github.io/) → points to the GitHub profile note and primary repositories.
 
