@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>lyftium — AI Integration for Engineering Systems</title>
-  <meta name="description" content="Data science (off-policy evaluation, honest baselines) and AI integration (API, Kind, GHCR) — public artefacts with stated limits." />
+  <title>Pierre — data science &amp; AI integration</title>
+  <meta name="description" content="Public artefacts: off-policy evaluation, drawing-review microservice, LoRA baselines, vLLM serving study, AI gateway. Stated limits; Kind ≠ live OpenShift GPU." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://lyftium.github.io/" />
   <style>
@@ -30,7 +30,7 @@
     main {
       max-width: 42rem;
       margin: 0 auto;
-      padding: 18vh 1.5rem 4rem;
+      padding: 16vh 1.5rem 4rem;
     }
     h1 {
       font-family: "IBM Plex Serif", Georgia, serif;
@@ -40,39 +40,65 @@
       margin: 0 0 0.35rem;
     }
     .role { color: var(--muted); margin: 0 0 1.25rem; }
-    p { margin: 0 0 1rem; color: var(--fg); }
-    .links { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; margin: 1.5rem 0 2rem; }
+    p { margin: 0 0 1rem; }
+    .links { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; margin: 1.25rem 0 1.75rem; }
     a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
     a:hover { border-bottom-color: var(--accent); }
+    h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 1.75rem 0 0.6rem;
+    }
     ul { margin: 0; padding-left: 1.1rem; color: var(--muted); }
-    li { margin: 0.35rem 0; }
+    li { margin: 0.4rem 0; }
     li a { color: var(--fg); }
-    footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+    .note { color: var(--muted); font-size: 0.95rem; }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
   <main>
-    <h1>lyftium</h1>
-    <p class="role">Data Scientist · AI Integration &amp; Engineering · Paris</p>
+    <h1>Pierre</h1>
+    <p class="role">Data scientist · AI integration · Paris</p>
     <p>
-      Public work on the gap between a notebook and a component another engineer can call, score, and prepare for deployment.
+      I evaluate decisions and models first, then package them so another engineer can call, score, and prepare them for a cluster.
     </p>
     <div class="links">
       <a href="https://github.com/lyftium">GitHub</a>
-      <a href="https://www.kaggle.com/lyftium">Kaggle</a>
       <a href="https://github.com/lyftium/lyftium#readme">Profile note</a>
+      <a href="https://www.kaggle.com/lyftium">Kaggle</a>
     </div>
-    <p><strong>Data scientist screeners:</strong> start with <a href="https://github.com/lyftium/off-policy-bandit-evaluation">off-policy-bandit-evaluation</a> (honest estimators + CIs), then LoRA baselines and the Kaggle honest-evaluation notebook. <strong>Integrator screeners:</strong> <strong>Serving path:</strong> <a href="https://github.com/lyftium/vllm-serving-benchmark-t4">vLLM T4</a> (measure) → <a href="https://github.com/lyftium/agent-gateway-stack">agent-gateway-stack</a> (gateway) → DRS/AGS KServe manifests (prep, not live GPU). start with <a href="https://github.com/lyftium/drawing-review-service">drawing-review-service</a>.</p>
-<ul>
-      <li><a href="https://github.com/lyftium/drawing-review-service">drawing-review-service</a> — API, eval gates, Kind Ready, GHCR digest, OpenShift AI manifests (GPU cluster not live)</li>
-      <li><a href="https://github.com/lyftium/vllm-serving-benchmark-t4">vllm-serving-benchmark-t4</a> — protocolled vLLM study on 2×T4 (single campaign); DEMO path</li>
-      <li><a href="https://github.com/lyftium/lora-finetune-recipe">lora-finetune-recipe</a> — baseline-first LoRA, resume, lineage</li>
-      <li><a href="https://github.com/lyftium/agent-gateway-stack">agent-gateway-stack</a> — gateway quotas + allowlisted tool agent; Kind Ready + ISA/approve-once agent-run; GHCR digest</li>
-      <li><a href="https://github.com/lyftium/off-policy-bandit-evaluation">off-policy-bandit-evaluation</a> — <strong>primary DS evidence</strong>: OPE on 1.37M real bandit logs (CIs, time split); DEMO path</li>
+
+    <h2>Look here first</h2>
+    <ul>
+      <li><a href="https://github.com/lyftium/off-policy-bandit-evaluation">off-policy-bandit-evaluation</a> — 1.37&nbsp;M logs; IPW/SNIPW/DR + CIs (<code>results.json</code>)</li>
+      <li><a href="https://github.com/lyftium/drawing-review-service">drawing-review-service</a> — FastAPI, golden gates, Kind Ready, GHCR digest</li>
+      <li><a href="https://github.com/lyftium/vllm-serving-benchmark-t4">vllm-serving-benchmark-t4</a> — ~35.5× batching on 2×T4 (single-run)</li>
     </ul>
+
+    <h2>Also</h2>
+    <ul>
+      <li><a href="https://github.com/lyftium/lora-finetune-recipe">lora-finetune-recipe</a> — prompted baseline 0.0→0.8 before the adapter</li>
+      <li><a href="https://github.com/lyftium/agent-gateway-stack">agent-gateway-stack</a> — quotas + approve-once agent (Kind / mock-llm)</li>
+    </ul>
+
+    <p class="note">
+      OpenShift AI / KServe manifests are prepared; live GPU cluster apply is not claimed.
+      Kind is the proof harness. Each flagship has <code>docs/DEMO.md</code>.
+    </p>
+
     <footer>
-      This site is a portfolio index only. Older product pages are retired from the homepage.
-      Research notes such as <a href="/gollamc.html">GOLLAMC</a> remain available where published.
+      Portfolio index only — not a product site.
+      Research notes such as <a href="/gollamc.html">GOLLAMC</a> remain where published.
     </footer>
   </main>
 </body>
