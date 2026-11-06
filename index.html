@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Integration for Engineering Systems — Pierre</title>
-  <meta name="description" content="Public artefacts: off-policy evaluation on 1.37M bandit logs, drawing-review microservice, LoRA with prompted baselines, vLLM on T4, AI gateway. Honest limits stated." />
+  <title>Pierre — Data Scientist · Applied ML &amp; AI Engineering</title>
+  <meta name="description" content="Pierre — model evaluation and AI services: off-policy evaluation, drawing-review API, vLLM benchmarks on T4." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://lyftium.github.io/" />
   <style>
@@ -14,55 +14,33 @@
       --muted: #5a6570;
       --line: #d8d2c6;
       --accent: #1f4d7a;
-      --card: #ffffff;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
       font-family: "Source Serif 4", "Iowan Old Style", Georgia, serif;
-      background:
-        linear-gradient(180deg, #efeae1 0%, var(--bg) 28%, var(--bg) 100%);
+      background: linear-gradient(180deg, #efeae1 0%, var(--bg) 30%, var(--bg) 100%);
       color: var(--fg);
       line-height: 1.55;
     }
-    main {
-      max-width: 42rem;
-      margin: 0 auto;
-      padding: 10vh 1.4rem 3.5rem;
-    }
-    .eyebrow {
-      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 0.65rem;
-    }
+    main { max-width: 40rem; margin: 0 auto; padding: 10vh 1.4rem 3.5rem; }
     h1 {
       font-weight: 600;
-      font-size: clamp(1.55rem, 3.6vw, 2.05rem);
+      font-size: clamp(1.55rem, 3.5vw, 2rem);
       letter-spacing: -0.015em;
+      margin: 0 0 0.35rem;
       line-height: 1.25;
-      margin: 0 0 0.4rem;
     }
     .sub {
       font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
       color: var(--muted);
       margin: 0 0 1.1rem;
-      font-size: 0.98rem;
+      font-size: 0.95rem;
     }
-    .abstract {
-      border-left: 3px solid var(--line);
-      padding: 0.15rem 0 0.15rem 1rem;
-      margin: 0 0 1.35rem;
-      color: var(--fg);
-      font-size: 0.98rem;
-    }
+    p { margin: 0 0 1rem; }
     .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem 1.15rem;
+      display: flex; flex-wrap: wrap; gap: 0.7rem 1.15rem;
       margin: 0 0 1.75rem;
       font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
       font-size: 0.92rem;
@@ -71,44 +49,25 @@
     a:hover { border-bottom-color: var(--accent); }
     h2 {
       font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 1.6rem 0 0.7rem;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--muted); margin: 1.6rem 0 0.7rem;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
+    ul { margin: 0; padding-left: 1.15rem; }
+    li { margin: 0.55rem 0; }
+    li span {
+      display: block;
       font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
-      font-size: 0.9rem;
-      background: var(--card);
-      border: 1px solid var(--line);
-    }
-    th, td {
-      text-align: left;
-      padding: 0.65rem 0.75rem;
-      border-bottom: 1px solid var(--line);
-      vertical-align: top;
-    }
-    th {
       color: var(--muted);
-      font-weight: 600;
-      font-size: 0.72rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      font-size: 0.9rem;
+      margin-top: 0.15rem;
     }
-    tr:last-child td { border-bottom: none; }
     .note {
       font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
-      color: var(--muted);
-      font-size: 0.88rem;
-      margin: 1.25rem 0 0;
+      color: var(--muted); font-size: 0.88rem; margin-top: 1.4rem;
     }
     footer {
-      margin-top: 2.25rem;
-      padding-top: 1rem;
+      margin-top: 2.25rem; padding-top: 1rem;
       border-top: 1px solid var(--line);
       color: var(--muted);
       font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
@@ -118,57 +77,43 @@
 </head>
 <body>
   <main>
-    <p class="eyebrow">Portfolio index · Paris · FR / EN</p>
-    <h1>AI Integration for Engineering Systems</h1>
-    <p class="sub">Evaluating decisions and models · serving them · packaging them so other engineers can run them</p>
-
-    <p class="abstract">
-      <strong>Abstract.</strong> Two hiring lenses, one public body of work: honest evaluation before a decision (baselines, bootstrap CIs, chronological hold-outs), then packaging (typed APIs, gates, Kind-proven prep). Primary DS evidence: off-policy evaluation on 1.37&nbsp;M real bandit rounds. Primary integration evidence: drawing-review microservice, LoRA with a prompted baseline, vLLM T4 protocol, AI gateway + approve-once agent.
+    <h1>Pierre</h1>
+    <p class="sub">Data scientist · applied ML &amp; AI engineering · Paris · FR / EN</p>
+    <p>
+      I work on model evaluation and the software needed to use models —
+      from logged-data policy scoring to APIs another engineer can run.
     </p>
-
     <div class="links">
-      <a href="https://github.com/lyftium/lyftium#readme">Full profile README</a>
+      <a href="https://github.com/lyftium/lyftium#readme">Profile</a>
       <a href="https://github.com/lyftium">GitHub</a>
       <a href="https://www.kaggle.com/lyftium">Kaggle</a>
     </div>
 
-    <h2>30-second glance</h2>
-    <table>
-      <thead>
-        <tr><th>Lens</th><th>Start here</th><th>Proof ceiling</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data scientist</td>
-          <td><a href="https://github.com/lyftium/off-policy-bandit-evaluation">off-policy-bandit-evaluation</a></td>
-          <td>1.37&nbsp;M logs · CIs · time split · estimated lift ≠ A/B</td>
-        </tr>
-        <tr>
-          <td>AI integrator</td>
-          <td><a href="https://github.com/lyftium/drawing-review-service">drawing-review-service</a></td>
-          <td>CI · Kind Ready · GHCR · OpenShift AI not live</td>
-        </tr>
-        <tr>
-          <td>Serving + gateway</td>
-          <td><a href="https://github.com/lyftium/vllm-serving-benchmark-t4">vLLM T4</a> · <a href="https://github.com/lyftium/agent-gateway-stack">gateway</a></td>
-          <td>Single-run levers · Kind / mock · no live GPU SLO</td>
-        </tr>
-        <tr>
-          <td>Also</td>
-          <td><a href="https://github.com/lyftium/lora-finetune-recipe">lora-finetune-recipe</a></td>
-          <td>Few-shot baseline 0.8 on same hash</td>
-        </tr>
-      </tbody>
-    </table>
+    <h2>Selected projects</h2>
+    <ul>
+      <li>
+        <a href="https://github.com/lyftium/off-policy-bandit-evaluation">Off-policy evaluation</a>
+        <span>1.37&nbsp;M bandit rounds — a narrow CI can still miss the reference CTR.</span>
+      </li>
+      <li>
+        <a href="https://github.com/lyftium/drawing-review-service">Drawing review service</a>
+        <span>FastAPI demonstrator; Kind-tested; OpenShift / KServe not live on GPU.</span>
+      </li>
+      <li>
+        <a href="https://github.com/lyftium/vllm-serving-benchmark-t4">vLLM on 2×T4</a>
+        <span>AWQ helped at one sequence and hurt at 128 for the tested 1.5B model (single-run).</span>
+      </li>
+    </ul>
 
-    <p class="note">
-      Kind ≠ live OpenShift GPU. Fashion OBD logs and synthetic drawings — not customer production metrics. Every flagship has a <code>docs/DEMO.md</code>.
-    </p>
+    <h2>Also</h2>
+    <ul>
+      <li><a href="https://github.com/lyftium/lora-finetune-recipe">LoRA recipe</a> <span>Few-shot baseline 0.8 before judging the adapter.</span></li>
+      <li><a href="https://github.com/lyftium/agent-gateway-stack">AI gateway</a> <span>Auth, quotas, approve-once (Kind / mock).</span></li>
+    </ul>
 
-    <footer>
-      Canonical portfolio · not a product catalogue.
-      Legacy notes: <a href="/gollamc.html">GOLLAMC</a>.
-    </footer>
+    <p class="note">Public artefacts only — fashion OBD logs and synthetic drawings, not customer metrics.</p>
+
+    <footer>Portfolio index · not a product catalogue.</footer>
   </main>
 </body>
 </html>
