@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pierre — data science &amp; AI integration</title>
-  <meta name="description" content="Public artefacts: off-policy evaluation, drawing-review microservice, LoRA baselines, vLLM serving study, AI gateway. Stated limits; Kind ≠ live OpenShift GPU." />
+  <meta name="description" content="Public work on evaluation honesty and packaging: off-policy bandits, drawing-review microservice, LoRA baselines, vLLM on T4, AI gateway." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://lyftium.github.io/" />
   <style>
@@ -25,10 +25,10 @@
         radial-gradient(900px 500px at 100% 0%, #1c2a22 0%, transparent 50%),
         var(--bg);
       color: var(--fg);
-      line-height: 1.5;
+      line-height: 1.55;
     }
     main {
-      max-width: 42rem;
+      max-width: 40rem;
       margin: 0 auto;
       padding: 16vh 1.5rem 4rem;
     }
@@ -45,15 +45,15 @@
     a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
     a:hover { border-bottom-color: var(--accent); }
     h2 {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       color: var(--muted);
-      margin: 1.75rem 0 0.6rem;
+      margin: 1.75rem 0 0.65rem;
     }
     ul { margin: 0; padding-left: 1.1rem; color: var(--muted); }
-    li { margin: 0.4rem 0; }
+    li { margin: 0.45rem 0; }
     li a { color: var(--fg); }
     .note { color: var(--muted); font-size: 0.95rem; }
     footer {
@@ -68,37 +68,36 @@
 <body>
   <main>
     <h1>Pierre</h1>
-    <p class="role">Data scientist · AI integration · Paris</p>
+    <p class="role">Paris · data science &amp; AI integration</p>
     <p>
-      I evaluate decisions and models first, then package them so another engineer can call, score, and prepare them for a cluster.
+      I like problems where the wrong metric looks convincing — then I package the useful bits so someone else can run them.
     </p>
     <div class="links">
       <a href="https://github.com/lyftium">GitHub</a>
-      <a href="https://github.com/lyftium/lyftium#readme">Profile note</a>
+      <a href="https://github.com/lyftium/lyftium#readme">Profile</a>
       <a href="https://www.kaggle.com/lyftium">Kaggle</a>
     </div>
 
-    <h2>Look here first</h2>
+    <h2>Start with these two</h2>
     <ul>
-      <li><a href="https://github.com/lyftium/off-policy-bandit-evaluation">off-policy-bandit-evaluation</a> — 1.37&nbsp;M logs; IPW/SNIPW/DR + CIs (<code>results.json</code>)</li>
-      <li><a href="https://github.com/lyftium/drawing-review-service">drawing-review-service</a> — FastAPI, golden gates, Kind Ready, GHCR digest</li>
-      <li><a href="https://github.com/lyftium/vllm-serving-benchmark-t4">vllm-serving-benchmark-t4</a> — ~35.5× batching on 2×T4 (single-run)</li>
+      <li><a href="https://github.com/lyftium/off-policy-bandit-evaluation">off-policy-bandit-evaluation</a> — did the estimator recover the truth?</li>
+      <li><a href="https://github.com/lyftium/drawing-review-service">drawing-review-service</a> — can another engineer call it and score it?</li>
     </ul>
 
     <h2>Also</h2>
     <ul>
-      <li><a href="https://github.com/lyftium/lora-finetune-recipe">lora-finetune-recipe</a> — prompted baseline 0.0→0.8 before the adapter</li>
-      <li><a href="https://github.com/lyftium/agent-gateway-stack">agent-gateway-stack</a> — quotas + approve-once agent (Kind / mock-llm)</li>
+      <li><a href="https://github.com/lyftium/lora-finetune-recipe">lora-finetune-recipe</a> — few-shot alone hits 0.8; don’t oversell the adapter</li>
+      <li><a href="https://github.com/lyftium/vllm-serving-benchmark-t4">vllm-serving-benchmark-t4</a> — ~35× from batching on 2×T4 (one campaign)</li>
+      <li><a href="https://github.com/lyftium/agent-gateway-stack">agent-gateway-stack</a> — quotas + approve-once (Kind / mock)</li>
     </ul>
 
     <p class="note">
-      OpenShift AI / KServe manifests are prepared; live GPU cluster apply is not claimed.
-      Kind is the proof harness. Each flagship has <code>docs/DEMO.md</code>.
+      Kind is the proof harness. OpenShift AI / KServe YAML is prepared, not live on GPU.
     </p>
 
     <footer>
-      Portfolio index only — not a product site.
-      Research notes such as <a href="/gollamc.html">GOLLAMC</a> remain where published.
+      Portfolio index — not a product site.
+      <a href="/gollamc.html">GOLLAMC</a> notes remain where published.
     </footer>
   </main>
 </body>
