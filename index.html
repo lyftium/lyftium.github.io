@@ -91,23 +91,24 @@
     <h2>Selected projects</h2>
     <ul>
       <li>
-        <a href="https://github.com/lyftium/off-policy-bandit-evaluation">Off-policy evaluation</a>
-        <span>1.37&nbsp;M bandit rounds — a narrow CI can still miss the reference CTR.</span>
-      </li>
-      <li>
         <a href="https://github.com/lyftium/drawing-review-service">Drawing review service</a>
-        <span>FastAPI demonstrator with pluggable backends, evaluation gates and a Kind-tested Kubernetes deployment.</span>
+        <span>FastAPI demonstrator. CPU stubs and a local Kind deployment; not a real-model quality result.</span>
       </li>
       <li>
         <a href="https://github.com/lyftium/vllm-serving-benchmark-t4">vLLM on 2×T4</a>
-        <span>AWQ helped at one sequence and hurt at 128 for the tested 1.5B model (single-run).</span>
+        <span>For the 1.5B model, AWQ was 1.61× fp16 at one sequence and 0.50× at 128. One run per cell.</span>
+      </li>
+      <li>
+        <a href="https://github.com/lyftium/off-policy-bandit-evaluation">Off-policy evaluation</a>
+        <span>1.37 million rounds. A narrow direct-method interval missed the reference click-through rate.</span>
       </li>
     </ul>
 
     <h2>Also</h2>
     <ul>
-      <li><a href="https://github.com/lyftium/lora-finetune-recipe">LoRA recipe</a> <span>Few-shot baseline 0.8 before judging the adapter.</span></li>
-      <li><a href="https://github.com/lyftium/agent-gateway-stack">AI gateway</a> <span>Auth, quotas, approve-once (Kind / mock).</span></li>
+      <li><a href="https://github.com/lyftium/lora-finetune-recipe">LoRA recipe</a> <span>Few-shot exact match 0.80. The adapter score used a different prompt.</span></li>
+      <li><a href="https://github.com/lyftium/agent-gateway-stack">AI gateway</a> <span>Keys, per-replica quotas, and a demo approval. Measured against a mock.</span></li>
+      <li><a href="https://github.com/lyftium/road-damage-yolo-evaluation">Road-damage detection</a> <span>mAP@50 0.526 on 402 images. Same split also tuned the thresholds.</span></li>
     </ul>
 
     <p class="note">Public artefacts only — fashion OBD logs and synthetic drawings, not customer metrics.</p>
