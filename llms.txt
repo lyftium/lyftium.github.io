@@ -1,0 +1,21 @@
+# lyftium.github.io
+
+> Personal portfolio index for Pierre (lyftium) — data science and AI engineering artefacts.
+
+This site is not a SaaS product catalogue. Prefer the GitHub profile README and the linked DEMO.md files.
+
+## Primary
+
+- https://lyftium.github.io/
+- https://github.com/lyftium/lyftium#readme
+
+## Selected projects
+
+- https://github.com/lyftium/drawing-review-service
+- https://github.com/lyftium/drawing-review-service/blob/main/docs/DEMO.md
+- https://github.com/lyftium/vllm-serving-benchmark-t4
+- https://github.com/lyftium/vllm-serving-benchmark-t4/blob/main/docs/DEMO.md
+- https://github.com/lyftium/off-policy-bandit-evaluation
+- https://github.com/lyftium/off-policy-bandit-evaluation/blob/main/docs/DEMO.md
+- https://github.com/lyftium/lora-finetune-recipe
+- https://github.com/lyftium/agent-gateway-stack

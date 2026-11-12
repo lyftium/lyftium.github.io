@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pierre — Data Scientist &amp; AI Engineer</title>
-  <meta name="description" content="Pierre evaluates models and decision policies, then builds the services needed to use them." />
+  <meta name="description" content="Pierre — data scientist &amp; AI engineer in Paris. Model and policy evaluation, LLM serving experiments, and testable AI services. FR / EN." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://lyftium.github.io/" />
   <style>
@@ -39,6 +39,12 @@
       font-size: 0.95rem;
     }
     p { margin: 0 0 1rem; }
+    .fr {
+      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin: 0 0 1.1rem;
+    }
     .links {
       display: flex; flex-wrap: wrap; gap: 0.7rem 1.15rem;
       margin: 0 0 1.75rem;
@@ -62,6 +68,12 @@
       font-size: 0.9rem;
       margin-top: 0.15rem;
     }
+    .demo {
+      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      font-size: 0.85rem;
+      margin-left: 0.35rem;
+      white-space: nowrap;
+    }
     .note {
       font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
       color: var(--muted); font-size: 0.88rem; margin-top: 1.4rem;
@@ -81,6 +93,11 @@
     <p class="sub">Data scientist &amp; AI engineer · Paris · FR / EN</p>
     <p>
       I evaluate models and decision policies, then build the services needed to use them.
+      Open to data science, applied ML, and AI integration roles.
+    </p>
+    <p class="fr">
+      Évaluation de modèles et de politiques, puis packaging en services testables.
+      Ouvert aux postes data science / ML appliqué / intégration IA (CDI, Paris ou remote FR).
     </p>
     <div class="links">
       <a href="https://github.com/lyftium/lyftium#readme">Profile</a>
@@ -92,23 +109,38 @@
     <ul>
       <li>
         <a href="https://github.com/lyftium/drawing-review-service">Drawing review service</a>
+        <a class="demo" href="https://github.com/lyftium/drawing-review-service/blob/main/docs/DEMO.md">Demo</a>
         <span>FastAPI demonstrator. CPU stubs and a local Kind deployment; not a real-model quality result.</span>
       </li>
       <li>
         <a href="https://github.com/lyftium/vllm-serving-benchmark-t4">vLLM on 2×T4</a>
+        <a class="demo" href="https://github.com/lyftium/vllm-serving-benchmark-t4/blob/main/docs/DEMO.md">Demo</a>
         <span>For the 1.5B model, AWQ was 1.61× fp16 at one sequence and 0.50× at 128. One run per cell.</span>
       </li>
       <li>
         <a href="https://github.com/lyftium/off-policy-bandit-evaluation">Off-policy evaluation</a>
+        <a class="demo" href="https://github.com/lyftium/off-policy-bandit-evaluation/blob/main/docs/DEMO.md">Demo</a>
         <span>1.37 million rounds. A narrow direct-method interval missed the reference click-through rate.</span>
       </li>
     </ul>
 
     <h2>Also</h2>
     <ul>
-      <li><a href="https://github.com/lyftium/lora-finetune-recipe">LoRA recipe</a> <span>Few-shot exact match 0.80. The adapter score used a different prompt.</span></li>
-      <li><a href="https://github.com/lyftium/agent-gateway-stack">AI gateway</a> <span>Keys, per-replica quotas, and a demo approval. Measured against a mock.</span></li>
-      <li><a href="https://github.com/lyftium/road-damage-yolo-evaluation">Road-damage detection</a> <span>mAP@50 0.526 on 402 images. Same split also tuned the thresholds.</span></li>
+      <li>
+        <a href="https://github.com/lyftium/lora-finetune-recipe">LoRA recipe</a>
+        <a class="demo" href="https://github.com/lyftium/lora-finetune-recipe/blob/main/docs/DEMO.md">Demo</a>
+        <span>Few-shot exact match 0.80. The adapter score used a different prompt.</span>
+      </li>
+      <li>
+        <a href="https://github.com/lyftium/agent-gateway-stack">AI gateway</a>
+        <a class="demo" href="https://github.com/lyftium/agent-gateway-stack/blob/main/docs/DEMO.md">Demo</a>
+        <span>Keys, per-replica quotas, and a demo approval. Measured against a mock.</span>
+      </li>
+      <li>
+        <a href="https://github.com/lyftium/road-damage-yolo-evaluation">Road-damage detection</a>
+        <a class="demo" href="https://github.com/lyftium/road-damage-yolo-evaluation/blob/main/BENCHMARK.md">Benchmark</a>
+        <span>mAP@50 0.526 on 402 images. Same split also tuned the thresholds.</span>
+      </li>
     </ul>
 
     <p class="note">Public artefacts only — fashion OBD logs and synthetic drawings, not customer metrics.</p>

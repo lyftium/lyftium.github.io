@@ -1,2 +1,16 @@
 User-agent: *
 Allow: /
+Disallow: /pricing.html
+Disallow: /lyftium-vs-make.html
+Disallow: /lyftium-vs-zapier.html
+Disallow: /agentic-ai-solutions.html
+Disallow: /ai-learning-loop-systems.html
+Disallow: /ai-readiness-assessment.html
+Disallow: /enterprise-ai-resilience.html
+Disallow: /integrations.html
+Disallow: /model-agnostic-platform.html
+Disallow: /gollamc.html
+Disallow: /blog.html
+Disallow: /blog/
+Disallow: /use-cases/
+Sitemap: https://lyftium.github.io/sitemap.xml
